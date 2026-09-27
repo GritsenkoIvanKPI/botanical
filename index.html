@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Botanical Extracts Pro — Natural Raw Materials for Perfumery & Cosmetics</title>
+<meta name="description" content="B2B producer and supplier of essential oils, absolutes, CO₂ extracts, concretes, hydrolates and plant waxes. Own production in France and Bulgaria, full batch traceability, samples and documentation, custom production and sourcing.">
+<link rel="alternate" hreflang="en" href="/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Marcellus&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blush: #fff0f7;
+  --blush-deep: #fbe1ec;
+  --olive: #66701d;
+  --olive-dark: #57621a;
+  --olive-light: #cdd479;
+  --olive-soft: #e6e9bf;
+  --saffron: #e8a94c;
+  --saffron-soft: #fbe6c6;
+  --terra: #dd6349;
+  --ink: #17150f;
+  --muted: #5e5852;
+  --card: #ffffff;
+
+  --font-serif: "Newsreader", Georgia, serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-mark: "Marcellus", Georgia, serif;
+
+  --pad-x: 1rem;
+  --wrap: 85rem;
+  --sp-3: 1.5rem;
+  --sp-4: 2rem;
+  --sp-5: 3rem;
+  --sp-6: 4.5rem;
+  --section-y: 5rem;
+
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --spring: cubic-bezier(.34, 1.56, .64, 1);
+  --shadow-1: 0 1px 2px rgba(120, 60, 40, .05), 0 6px 18px -6px rgba(120, 60, 40, .10);
+  --shadow-2: 0 2px 4px rgba(120, 60, 40, .05), 0 24px 48px -16px rgba(120, 60, 40, .22);
+}
+@media (min-width: 48rem) { :root { --pad-x: 1.75rem; --sp-6: 5.5rem; --section-y: 6.5rem; } }
+@media (min-width: 64rem) { :root { --section-y: 7.5rem; } }
+@media (min-width: 80rem) { :root { --pad-x: 2.5rem; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #fff; color: var(--ink);
+  font: 400 1rem/1.7 var(--font-sans); -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+body.no-scroll { overflow: hidden; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3, p, ul, ol { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+button { font: inherit; color: inherit; }
+::selection { background: var(--olive); color: #fff; }
+:focus-visible { outline: 2px solid var(--terra); outline-offset: 3px; }
+.defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.wrap { max-width: calc(var(--wrap) + 2 * var(--pad-x)); margin: 0 auto; padding: 0 var(--pad-x); }
+.section { padding: var(--section-y) 0; }
+.section--tight { padding: calc(var(--section-y) * .5) 0; }
+
+/* ---------- Type ---------- */
+.display, .title { font-family: var(--font-serif); font-weight: 400; letter-spacing: -.03em; }
+.display { font-size: clamp(2.75rem, 7.4vw, 5.75rem); line-height: 1.02; }
+.title { font-size: clamp(2.125rem, 4.4vw, 3.5rem); line-height: 1.08; }
+.display em, .title em { font-style: italic; }
+h1, h2, h3, .title, .display { text-wrap: balance; }
+.faq summary { text-wrap: pretty; }
+p, li, .lede { text-wrap: pretty; }
+.nw { white-space: nowrap; }
+.eyebrow { font: 700 .75rem/1.3 var(--font-sans); letter-spacing: .12em; text-transform: uppercase; }
+.lede { font-size: 1.0625rem; color: var(--muted); max-width: 36rem; }
+.head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: var(--sp-3); margin-bottom: var(--sp-5); }
+.head--center { flex-direction: column; align-items: center; text-align: center; gap: .75rem; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  position: relative; display: inline-flex; align-items: center; justify-content: center; gap: .625rem;
+  min-height: 3rem; padding: .8125rem 1.625rem; border: 0; cursor: pointer;
+  font: 700 .8125rem/1 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; text-decoration: none;
+  background: var(--olive); color: #fff;
+  transition: transform .5s var(--spring), box-shadow .4s var(--ease), background-color .3s var(--ease), color .3s var(--ease);
+}
+.btn svg { width: 1rem; height: 1rem; transition: transform .45s var(--spring); }
+.btn:hover { transform: translateY(-2px); background: var(--olive-dark); box-shadow: 0 12px 24px -10px rgba(70, 80, 15, .55); }
+.btn:hover svg { transform: translateX(4px); }
+.btn:active { transform: translateY(0) scale(.97); box-shadow: none; }
+.btn--white { background: var(--card); color: var(--ink); }
+.btn--white:hover { background: var(--card); box-shadow: 0 12px 28px -10px rgba(0, 0, 0, .45); }
+.btn--ghost { background: transparent; color: #fff; box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .8); }
+.btn--ghost:hover { background: rgba(255, 255, 255, .14); box-shadow: inset 0 0 0 1.5px #fff; }
+.btn--ink { background: var(--ink); color: #fff; }
+.btn--ink:hover { background: var(--ink); box-shadow: 0 12px 24px -10px rgba(23, 21, 15, .55); }
+.btn--line { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
+.btn--line:hover { background: var(--ink); color: #fff; }
+.btn--block { width: 100%; }
+.btn--sm { min-height: 2.5rem; padding: .625rem 1.125rem; font-size: .75rem; }
+
+/* Phones: full-width, taller buttons with slightly larger labels */
+@media (max-width: 35.99rem) {
+  .btn { width: 100%; min-height: 3.5rem; padding: 1rem 1.25rem; font-size: .875rem; }
+  .hero__ctas, .footer__ctas { flex-direction: column; align-items: stretch; }
+  .hero__ctas { width: 100%; }
+  .faq-head { justify-items: stretch; }
+}
+.link-u { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; transition: opacity .3s var(--ease); }
+.link-u:hover { opacity: .7; }
+.link-u:active { opacity: .5; }
+
+/* ---------- Announcement ---------- */
+.promo { position: relative; z-index: 60; background: var(--olive); color: #fff; font-size: .875rem; font-weight: 500; }
+.promo__inner { display: flex; align-items: center; justify-content: center; gap: .75rem; min-height: 2.75rem; padding: .5rem 3rem; text-align: center; }
+.promo__dot { width: .5rem; height: .5rem; flex: none; background: #fff; transform: rotate(45deg); animation: pulse 2s var(--ease) infinite; }
+.promo__close { position: absolute; right: .5rem; top: 50%; margin-top: -1.125rem; width: 2.25rem; height: 2.25rem; display: grid; place-items: center; border: 0; background: none; cursor: pointer; transition: transform .4s var(--spring), background-color .3s var(--ease); }
+.promo__close:hover { transform: rotate(90deg); background: rgba(255, 255, 255, .14); }
+.promo__close:active { transform: rotate(90deg) scale(.9); }
+.promo.is-hidden { display: none; }
+.promo__short { display: none; }
+@media (max-width: 36rem) { .promo__long { display: none; } .promo__short { display: inline; } }
+@keyframes pulse { 0%, 100% { transform: rotate(45deg) scale(1); opacity: 1; } 50% { transform: rotate(45deg) scale(.55); opacity: .5; } }
+
+/* ---------- Nav ---------- */
+.nav-shell { position: sticky; top: 0; z-index: 50; height: 0; }
+.nav {
+  position: absolute; left: var(--pad-x); right: var(--pad-x); top: 1rem;
+  max-width: var(--wrap); margin: 0 auto;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem;
+  height: 3.5rem; padding: 0 .5rem 0 .5rem;
+  background: rgba(255, 255, 255, .96); box-shadow: var(--shadow-1); backdrop-filter: blur(10px);
+  transition: transform .5s var(--ease), box-shadow .4s var(--ease);
+}
+.nav-shell.is-scrolled .nav { box-shadow: var(--shadow-2); }
+.nav__links { display: none; gap: 2rem; }
+.nav__links a { position: relative; font: 700 .8125rem/1 var(--font-sans); letter-spacing: .06em; text-transform: uppercase; text-decoration: none; padding: .5rem 0; }
+.nav__links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1.5px; background: var(--terra); transform: scaleX(0); transform-origin: right; transition: transform .45s var(--ease); }
+.nav__links a:hover::after, .nav__links a.is-active::after { transform: scaleX(1); transform-origin: left; }
+.nav__links a:active { opacity: .6; }
+.nav__right { display: flex; align-items: center; justify-content: flex-end; gap: 1.25rem; padding-right: .5rem; }
+.lang { font: 700 .75rem/1 var(--font-sans); letter-spacing: .08em; padding: .5rem .625rem; background: var(--blush); }
+.logo { display: inline-flex; flex-direction: column; align-items: center; line-height: 1; text-decoration: none; transition: opacity .3s var(--ease), transform .5s var(--spring); }
+.logo:hover { transform: scale(1.03); }
+.logo:active { transform: scale(.98); opacity: .7; }
+.logo__main { font-family: var(--font-mark); font-size: 1.375rem; letter-spacing: .06em; }
+.logo__sub { margin-top: .1875rem; font: 700 .5rem/1 var(--font-sans); letter-spacing: .38em; padding-left: .38em; }
+.nav .btn { display: none; }
+.burger { display: inline-flex; flex-direction: column; justify-content: center; gap: 5px; width: 2.75rem; height: 2.75rem; padding: .75rem; border: 0; background: none; cursor: pointer; transition: background-color .3s var(--ease), transform .4s var(--spring); }
+.burger:hover { background: var(--blush); }
+.burger:active { transform: scale(.94); }
+.burger span { display: block; height: 1.5px; background: var(--ink); transition: transform .45s var(--spring), opacity .3s var(--ease); }
+.nav-shell.is-open .burger span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-shell.is-open .burger span:nth-child(2) { opacity: 0; }
+.nav-shell.is-open .burger span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.nav__left-mobile { display: flex; }
+@media (min-width: 64rem) {
+  .nav { padding: 0 .5rem 0 2.25rem; height: 3.75rem; }
+  .nav__links { display: flex; }
+  .nav__left-mobile { display: none; }
+  .nav .btn { display: inline-flex; }
+  .nav__right { padding-right: 0; }
+}
+
+.drawer {
+  position: fixed; inset: 0; z-index: 45; padding: 10rem var(--pad-x) var(--sp-4); overflow-y: auto;
+  display: flex; flex-direction: column; gap: .25rem; background: #fff;
+  opacity: 0; pointer-events: none; transition: opacity .4s var(--ease);
+}
+.drawer a:not(.btn) { font: 400 2rem/1.3 var(--font-serif); letter-spacing: -.02em; text-decoration: none; padding: .375rem 0; opacity: 0; transform: translateY(1rem); transition: opacity .5s var(--ease), transform .6s var(--ease); }
+.drawer a:not(.btn):active { opacity: .6; }
+.drawer .btn { margin-top: var(--sp-3); }
+.nav-shell.is-open + .drawer { opacity: 1; pointer-events: auto; }
+.nav-shell.is-open + .drawer a:not(.btn) { opacity: 1; transform: none; }
+.drawer a:nth-child(2) { transition-delay: .04s; } .drawer a:nth-child(3) { transition-delay: .08s; } .drawer a:nth-child(4) { transition-delay: .12s; }
+.drawer a:nth-child(5) { transition-delay: .16s; } .drawer a:nth-child(6) { transition-delay: .2s; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative; display: flex; flex-direction: column; overflow: hidden; color: #fff;
+  height: calc(100vh - var(--promo-h, 2.75rem));
+  height: calc(100svh - var(--promo-h, 2.75rem));
+  min-height: 18rem; max-height: 60rem;
+}
+.hero__media { position: absolute; inset: 0; }
+.hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: center 45%; animation: kenburns 14s var(--ease) both; }
+.hero__media::before { content: ""; position: absolute; inset: 0; z-index: 1; background: #7a3b2c; mix-blend-mode: multiply; opacity: .2; }
+.hero__media::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(0, 0, 0, .62), rgba(0, 0, 0, .12) 55%, rgba(0, 0, 0, .28)); }
+.hero__content {
+  position: relative; z-index: 2; flex: 1; min-height: 0;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: clamp(5rem, 11vh, 6.5rem) var(--pad-x) clamp(1rem, 3vh, 2rem); text-align: center;
+}
+.hero .display { max-width: 15ch; margin: 0 auto; font-size: clamp(2.125rem, min(7.4vw, 8.2vh), 5.75rem); text-shadow: 0 2px 30px rgba(0, 0, 0, .18); }
+.hero .display .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .1em; margin-bottom: -.1em; }
+.hero .display .w > span { display: inline-block; animation: wordUp 1.1s var(--ease) both; }
+.hero__sub { max-width: 38rem; margin: clamp(.75rem, 2.4vh, 1.5rem) auto 0; font-size: clamp(.9375rem, 1.9vh, 1.0625rem); line-height: 1.6; color: rgba(255, 255, 255, .92); animation: fadeUp 1s .75s var(--ease) both; }
+.hero__ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin-top: clamp(1rem, 3.2vh, 2rem); animation: fadeUp 1s .9s var(--ease) both; }
+.hero__proof {
+  position: relative; z-index: 2; flex: none;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; padding: 0 var(--pad-x) clamp(1rem, 3vh, 1.5rem);
+  animation: fadeUp 1s 1.1s var(--ease) both;
+}
+@media (max-height: 40rem) { .hero__sub { display: none; } }
+@media (max-height: 28rem) { .hero__proof { display: none; } .hero__content { padding-top: 4.5rem; } }
+.chip { display: inline-flex; align-items: center; gap: .5rem; padding: .5rem .875rem; font-size: .8125rem; font-weight: 600; background: rgba(255, 255, 255, .16); backdrop-filter: blur(8px); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .28); }
+.chip svg { width: .875rem; height: .875rem; color: var(--olive-light); }
+@media (max-width: 36rem) { .hero__proof .chip:nth-child(n + 3) { display: none; } }
+@keyframes kenburns { from { transform: scale(1.14); } to { transform: scale(1); } }
+@keyframes wordUp { from { transform: translateY(110%); } to { transform: none; } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(1.25rem); } to { opacity: 1; transform: none; } }
+
+/* ---------- Trust ---------- */
+.trust { padding: calc(var(--section-y) * .8) 0; text-align: center; }
+.trust__row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--sp-3) clamp(2rem, 6vw, 4.5rem); margin-top: var(--sp-3); }
+.trust__logo { font-size: clamp(1.75rem, 3.4vw, 2.625rem); line-height: 1; opacity: .88; transition: transform .5s var(--spring), opacity .3s var(--ease); }
+.trust__logo:hover { transform: translateY(-3px); opacity: 1; }
+.trust__logo--a { font-family: var(--font-mark); letter-spacing: .12em; }
+.trust__logo--b { font-family: var(--font-serif); font-style: italic; letter-spacing: -.02em; }
+.trust__logo--c { font-family: var(--font-sans); font-weight: 700; letter-spacing: .18em; font-size: clamp(1.25rem, 2.4vw, 1.75rem); }
+.trust__creds { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin-top: var(--sp-4); }
+.cred { display: inline-flex; align-items: center; gap: .5rem; padding: .5rem 1rem; background: var(--card); font-size: .8125rem; font-weight: 600; box-shadow: var(--shadow-1); }
+.cred i { width: .5rem; height: .5rem; background: var(--olive); transform: rotate(45deg); }
+.cred:nth-child(2) i { background: var(--saffron); }
+.cred:nth-child(3) i { background: var(--terra); }
+
+/* ---------- Products ---------- */
+.products { display: grid; gap: var(--sp-4) 1.25rem; grid-template-columns: 1fr; }
+@media (min-width: 36rem) { .products { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 64rem) { .products { grid-template-columns: repeat(4, 1fr); gap: var(--sp-5) 2rem; } }
+.product { display: flex; flex-direction: column; text-align: center; container-type: inline-size; }
+.product__media { position: relative; aspect-ratio: 1 / 1.1; overflow: hidden; background: var(--card); box-shadow: var(--shadow-1); transition: transform .6s var(--spring), box-shadow .5s var(--ease); }
+.product__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.product:hover .product__media { transform: translateY(-6px); box-shadow: var(--shadow-2); }
+.product:hover .product__media img { transform: scale(1.06); }
+.badge { position: absolute; z-index: 1; top: .875rem; right: .875rem; padding: .4375rem .8125rem; font: 700 .6875rem/1 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; background: var(--saffron); }
+.badge--olive { background: var(--olive); color: #fff; }
+.badge--terra { background: var(--terra); color: #fff; }
+.product__name { margin-top: 1.125rem; font: 400 1.625rem/1.2 var(--font-serif); letter-spacing: -.02em; }
+.product__kind { margin-top: .375rem; }
+.sub { font-size: .62em; position: relative; top: .28em; line-height: 0; }
+.product__docs { margin: .5rem 0 1rem; font-size: .875rem; color: var(--muted); }
+.product .btn { margin-top: auto; }
+
+.product--cta .product__media { display: flex; flex-direction: column; justify-content: space-between; flex: 1 0 auto; aspect-ratio: auto; min-height: calc(110cqw + var(--cta-extra, 6.25rem)); padding: var(--sp-4) var(--sp-3); text-align: left; background: var(--saffron); box-shadow: none; }
+.product--cta .title { font-size: clamp(1.875rem, 2.6vw, 2.375rem); margin-bottom: .75rem; }
+.product--cta p { font-size: .9375rem; }
+.product--cta .flower { width: 3rem; height: 3rem; animation: spin 18s linear infinite; }
+.product--cta .btn { margin-top: 1.125rem; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- Split ---------- */
+.split { display: grid; gap: var(--sp-4); align-items: center; }
+@media (min-width: 64rem) { .split { grid-template-columns: 1fr 1fr; gap: 2rem; } .split--rev .split__media { order: 2; } }
+/* Tablets and landscape phones: wider, shorter photos when stacked */
+@media (min-width: 36rem) and (max-width: 63.99rem) { .split .split__media, .features-grid .split__media { aspect-ratio: 16 / 10; } #approach .split__media img { object-position: center 22%; } }
+/* Desktop: photo matches the height of the text column beside it */
+@media (min-width: 64rem) {
+  .split, .features-grid { align-items: stretch; }
+  .split .split__media, .features-grid .split__media { aspect-ratio: auto; height: 100%; }
+  .split .split__media img, .features-grid .split__media img { position: absolute; inset: 0; }
+  .split__body { align-self: center; }
+  .split:not(.split--rev) .split__body { padding-left: 2.5rem; }
+  #approach .split__media img { object-position: center 22%; }
+}
+.split__media { position: relative; overflow: hidden; aspect-ratio: 4 / 5; }
+.split__media img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.12); transition: transform 1.8s var(--ease); }
+.split__media.visible img { transform: scale(1); }
+.split__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, .2), transparent 40%); pointer-events: none; }
+.split__body { max-width: 34rem; text-align: left; }
+.split__body .eyebrow { margin-bottom: .75rem; }
+.split__body .title { margin-bottom: var(--sp-3); }
+.split__body .lede { margin: 0; }
+.split__body .btn { margin-top: var(--sp-4); }
+.floating-tag {
+  position: absolute; z-index: 1; left: 1.25rem; bottom: 1.25rem; display: flex; align-items: center; gap: .75rem;
+  padding: .625rem 1.125rem .625rem .625rem; background: rgba(255, 255, 255, .95); box-shadow: var(--shadow-2);
+  font-size: .875rem; font-weight: 600; animation: bob 5s ease-in-out infinite;
+}
+.floating-tag b { display: grid; place-items: center; min-width: 2.25rem; height: 2.25rem; padding: 0 .625rem; background: var(--olive); color: #fff; font-weight: 700; font-size: .8125rem; }
+@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+.checks { display: grid; gap: .625rem; margin-top: var(--sp-3); text-align: left; }
+.checks li { display: flex; gap: .75rem; align-items: flex-start; }
+.checks svg { flex: none; width: 1.375rem; height: 1.375rem; margin-top: .1875rem; padding: .25rem; background: var(--olive); color: #fff; }
+
+/* ---------- Marquee ---------- */
+.marquee { overflow: hidden; background: var(--saffron); color: #fff; padding: 1.125rem 0; }
+.marquee__track { display: flex; width: max-content; animation: marquee 32s linear infinite; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee__item { display: flex; align-items: center; gap: 1.75rem; padding-right: 1.75rem; white-space: nowrap; font: 400 clamp(1.875rem, 3.6vw, 3rem)/1.15 var(--font-serif); letter-spacing: -.02em; }
+.marquee__item svg { width: 2.25rem; height: 2.25rem; flex: none; animation: spin 12s linear infinite; }
+.marquee--terra { background: var(--terra); }
+.marquee--terra .marquee__track { animation-direction: reverse; animation-duration: 40s; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* ---------- Features ---------- */
+.features-grid { display: grid; gap: var(--sp-5); align-items: center; }
+@media (min-width: 64rem) { .features-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
+.features { display: grid; gap: 2.75rem 2.5rem; margin-top: var(--sp-5); }
+@media (min-width: 64rem) { .features { gap: 3.5rem 3rem; } }
+@media (min-width: 36rem) { .features { grid-template-columns: 1fr 1fr; } }
+.feature__icon { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; background: var(--saffron); margin-bottom: 1.125rem; }
+.feature__icon svg { width: 1.25rem; height: 1.25rem; }
+.feature:nth-child(3n + 2) .feature__icon { background: var(--olive); color: #fff; }
+.feature:nth-child(3n) .feature__icon { background: var(--terra); color: #fff; }
+.feature .eyebrow { margin-bottom: .5rem; }
+@media (max-width: 35.99rem) { .feature .eyebrow { font-size: 1rem; letter-spacing: .1em; margin-bottom: .375rem; } .feature p { font-size: 1rem; } }
+.feature p { font-size: .9375rem; line-height: 1.6; }
+
+
+/* ---------- Stats ---------- */
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-5) var(--sp-3); max-width: 72rem; margin: 0 auto; padding: var(--sp-4) 0; }
+@media (min-width: 64rem) { .stats { grid-template-columns: repeat(4, 1fr); } }
+.stat { text-align: center; }
+.stat__num { display: block; font: 400 clamp(2.25rem, 3.4vw, 3rem)/1 var(--font-serif); letter-spacing: -.02em; color: var(--ink); }
+.stat__num em { font-style: italic; }
+.stat__label { display: block; margin-top: .875rem; font-size: .9375rem; font-weight: 500; line-height: 1.4; }
+.stat__note { display: block; margin-top: .25rem; font: italic 400 1rem/1.4 var(--font-serif); color: var(--muted); }
+
+/* ---------- Steps ---------- */
+.steps { display: grid; gap: 1.25rem; }
+@media (min-width: 48rem) { .steps { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 64rem) { .steps { grid-template-columns: repeat(4, 1fr); } }
+.step { position: relative; padding: var(--sp-4) var(--sp-3); background: var(--card); box-shadow: var(--shadow-1); transition: transform .6s var(--spring), box-shadow .5s var(--ease); }
+.step:hover { transform: translateY(-6px); box-shadow: var(--shadow-2); }
+.step__num { display: grid; place-items: center; width: 3.25rem; height: 3.25rem; margin-bottom: var(--sp-3); font: italic 400 1.5rem/1 var(--font-serif); }
+.step:nth-child(1) .step__num { background: var(--olive-soft); }
+.step:nth-child(2) .step__num { background: var(--saffron-soft); }
+.step:nth-child(3) .step__num { background: var(--blush-deep); }
+.step:nth-child(4) .step__num { background: var(--olive); color: #fff; }
+.step h3 { font: 400 1.5rem/1.2 var(--font-serif); letter-spacing: -.02em; margin-bottom: .5rem; }
+.step p { font-size: .9375rem; color: var(--muted); line-height: 1.6; }
+
+/* ---------- FAQ ---------- */
+.faq-grid { display: grid; gap: var(--sp-4); }
+@media (min-width: 64rem) { .faq-grid { grid-template-columns: 5fr 7fr; gap: 4rem; } .faq-grid .faq-head { position: sticky; top: 7rem; align-self: start; } }
+.faq-head { display: grid; gap: 1rem; justify-items: start; }
+.faq { display: grid; gap: .75rem; }
+.faq details { background: var(--card); box-shadow: var(--shadow-1); transition: box-shadow .4s var(--ease); }
+.faq details[open] { box-shadow: var(--shadow-2); }
+.faq summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.25rem 1.5rem; cursor: pointer; list-style: none; font: 400 1.3125rem/1.3 var(--font-serif); letter-spacing: -.01em; transition: opacity .3s var(--ease); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:hover { opacity: .75; }
+.faq summary:active { opacity: .55; }
+.faq__plus { position: relative; flex: none; width: 2rem; height: 2rem; background: var(--olive); transition: transform .5s var(--spring), background-color .3s var(--ease); }
+.faq__plus::before, .faq__plus::after { content: ""; position: absolute; left: 50%; top: 50%; width: .75rem; height: 1.5px; margin: -.75px 0 0 -.375rem; background: #fff; }
+.faq__plus::after { transform: rotate(90deg); }
+.faq details[open] .faq__plus { transform: rotate(45deg); background: var(--saffron); }
+.faq details[open] .faq__plus::before, .faq details[open] .faq__plus::after { background: var(--ink); }
+.faq__a { padding: 0 1.5rem 1.375rem; color: var(--muted); font-size: .9375rem; line-height: 1.65; }
+.faq details[open] .faq__a { animation: fadeUp .5s var(--ease) both; }
+
+/* ---------- Quote ---------- */
+.quote { display: grid; overflow: hidden; background: var(--card); box-shadow: var(--shadow-2); }
+@media (min-width: 64rem) { .quote { grid-template-columns: 5fr 7fr; } }
+.quote__aside { position: relative; min-height: 26rem; padding: var(--sp-4) var(--sp-3); color: #fff; display: flex; flex-direction: column; justify-content: flex-end; gap: 1.25rem; }
+@media (min-width: 48rem) { .quote__aside { padding: var(--sp-5); } }
+.quote__aside img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.quote__aside::before { content: ""; position: absolute; inset: 0; z-index: 1; background: var(--terra); mix-blend-mode: multiply; opacity: .35; }
+.quote__aside::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(40, 14, 8, .88), rgba(40, 14, 8, .05) 75%); }
+.quote__aside > *:not(img) { position: relative; z-index: 2; }
+.contact-list { display: grid; gap: .625rem; margin-top: .5rem; }
+.contact-pill { display: flex; align-items: center; gap: .75rem; padding: .5rem 1rem .5rem .5rem; background: rgba(255, 255, 255, .14); backdrop-filter: blur(8px); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .25); text-decoration: none; font-weight: 600; font-size: .9375rem; line-height: 1.3; overflow-wrap: anywhere; transition: transform .5s var(--spring), background-color .3s var(--ease); }
+a.contact-pill:hover { transform: translateX(4px); background: rgba(255, 255, 255, .24); }
+a.contact-pill:active { transform: scale(.98); }
+.contact-pill b { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; flex: none; background: var(--olive); color: #fff; }
+.contact-pill b svg { width: 1.0625rem; height: 1.0625rem; }
+@media (max-width: 24rem) { .quote__aside { padding-left: 1rem; padding-right: 1rem; } .contact-pill { font-size: .75rem; gap: .5rem; padding-right: .5rem; } .contact-pill b { width: 2rem; height: 2rem; } }
+.contact-pill small { display: block; font-weight: 500; font-size: .75rem; opacity: .8; }
+
+.form { display: grid; gap: 1rem; padding: var(--sp-4) var(--sp-3); align-content: center; }
+@media (min-width: 48rem) { .form { grid-template-columns: 1fr 1fr; padding: var(--sp-5); } }
+.form > .eyebrow { grid-column: 1 / -1; }
+.field { display: flex; flex-direction: column; gap: .375rem; }
+.field--full { grid-column: 1 / -1; }
+.field label { font-size: .8125rem; font-weight: 700; }
+.field input, .field select, .field textarea {
+  width: 100%; padding: .875rem 1.125rem; font: 500 .9375rem/1.4 var(--font-sans); color: var(--ink);
+  background: var(--blush); border: 1.5px solid transparent; appearance: none;
+  transition: border-color .3s var(--ease), background-color .3s var(--ease);
+}
+.field select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%2317150f' stroke-width='1.5'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1.125rem center; padding-right: 2.5rem; }
+.field textarea { min-height: 7.5rem; resize: vertical; }
+.field input::placeholder, .field textarea::placeholder { color: #a1928c; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: rgba(23, 21, 15, .25); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--olive); background-color: #fff; }
+.field input:user-invalid, .field textarea:user-invalid { border-color: var(--terra); }
+.consent { grid-column: 1 / -1; display: flex; gap: .625rem; align-items: flex-start; font-size: .8125rem; line-height: 1.5; color: var(--muted); cursor: pointer; }
+.consent input { accent-color: var(--olive); margin-top: .1875rem; width: 1rem; height: 1rem; flex: none; cursor: pointer; }
+.form__foot { grid-column: 1 / -1; display: grid; gap: .75rem; }
+.form__status { font-size: .875rem; font-weight: 600; min-height: 1.5rem; }
+
+/* ---------- Footer ---------- */
+.footer-shell { padding: 0 var(--pad-x) var(--pad-x); }
+.footer { max-width: var(--wrap); margin: 0 auto; padding: var(--sp-5) var(--sp-3) var(--sp-4); background: var(--terra); color: #fff; overflow: hidden; }
+@media (min-width: 48rem) { .footer { padding: var(--sp-6) var(--sp-5) var(--sp-4); } }
+.footer__top { display: grid; gap: var(--sp-5); }
+@media (min-width: 64rem) { .footer__top { grid-template-columns: 1.2fr 1fr; } }
+.footer__flower { width: 2.5rem; height: 2.5rem; margin-bottom: var(--sp-3); animation: spin 20s linear infinite; }
+.footer .title { font-size: clamp(2rem, 3.4vw, 2.75rem); margin-bottom: var(--sp-3); }
+.footer__ctas { display: flex; flex-wrap: wrap; gap: .75rem; }
+.footer__cols { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-4) var(--sp-3); }
+@media (min-width: 48rem) { .footer__cols { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 22.5rem) { .footer { padding-left: 1.25rem; padding-right: 1.25rem; } .footer__cols { grid-template-columns: 1fr; } }
+.footer__top > * { min-width: 0; }
+.footer__cols h3 { font: 400 1.5rem/1.2 var(--font-serif); margin-bottom: 1rem; }
+.footer__cols li + li { margin-top: .375rem; }
+.footer__cols a { text-decoration: none; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size .45s var(--ease); }
+.footer__cols a:hover { background-size: 100% 1px; }
+.footer__cols a:active { opacity: .7; }
+.wordmark { display: flex; justify-content: space-between; margin: var(--sp-5) 0 var(--sp-4); font: 400 clamp(3rem, 13.6vw, 12.5rem)/.9 var(--font-mark); overflow: hidden; padding-top: .06em; }
+.wordmark span { display: inline-block; transform: translateY(110%); transition: transform 1.1s var(--ease); }
+.wordmark.visible span { transform: none; }
+@media (max-width: 30rem) { .wordmark { font-size: 12vw; } }
+.footer__bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem; font-size: .875rem; opacity: .92; }
+
+/* ---------- Floating WhatsApp ---------- */
+.wa {
+  position: fixed; z-index: 40; right: 1rem; bottom: 1rem; display: flex; align-items: center; gap: .625rem;
+  padding: .5rem 1.125rem .5rem .5rem; background: var(--ink); color: #fff; text-decoration: none;
+  font: 700 .8125rem/1 var(--font-sans); letter-spacing: .04em; box-shadow: 0 12px 30px -8px rgba(23, 21, 15, .45);
+  opacity: 0; transform: translateY(1.5rem) scale(.9); pointer-events: none;
+  transition: opacity .4s var(--ease), transform .6s var(--spring);
+}
+.wa.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+.wa.is-visible:hover { transform: translateY(-3px); }
+.wa.is-visible:active { transform: scale(.96); }
+.wa b { position: relative; z-index: 0; display: grid; place-items: center; width: 2.5rem; height: 2.5rem; background: var(--olive); color: #fff; }
+.wa b::after { content: ""; position: absolute; inset: 0; background: var(--olive); z-index: -1; animation: ring 2.4s var(--ease) infinite; }
+.wa svg { width: 1.25rem; height: 1.25rem; }
+@keyframes ring { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(1.8); opacity: 0; } }
+@media (max-width: 30rem) { .wa__label { display: none; } .wa { padding: .5rem; } }
+
+/* ---------- Reveal ---------- */
+.reveal { opacity: 0; transform: translateY(2rem); transition: opacity 1s var(--ease), transform 1.1s var(--ease); }
+.reveal.visible { opacity: 1; transform: none; }
+.d1 { transition-delay: .08s; } .d2 { transition-delay: .16s; } .d3 { transition-delay: .24s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal, .wordmark span, .hero .display .w > span, .split__media img { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<svg class="defs" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-flower" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"><polygon points="24.0,2.0 27.3,16.1 39.6,8.4 31.9,20.7 46.0,24.0 31.9,27.3 39.6,39.6 27.3,31.9 24.0,46.0 20.7,31.9 8.4,39.6 16.1,27.3 2.0,24.0 16.1,20.7 8.4,8.4 20.7,16.1"/><rect x="20" y="20" width="8" height="8" transform="rotate(45 24 24)"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 16 16"><path d="M1 8h13M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 004.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15a8.2 8.2 0 01-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24s8.23 3.7 8.23 8.24-3.69 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"><rect x="3" y="5" width="18" height="14"/><path d="M3 5l9 7 9-7"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"><path d="M12 22L5 10l7-8 7 8z"/><rect x="10" y="8" width="4" height="4"/></g></symbol>
+  </defs>
+</svg>
+
+<div class="promo" id="promo">
+  <div class="promo__inner">
+    <span class="promo__dot" aria-hidden="true"></span>
+    <a class="link-u" href="#quote"><span class="promo__long">Samples, CoA &amp; SDS available for professional buyers. Request yours</span><span class="promo__short">Samples, CoA &amp; SDS on request</span></a>
+  </div>
+  <button class="promo__close" type="button" aria-label="Close announcement">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"><path d="M1 1l12 12M13 1L1 13"/></svg>
+  </button>
+</div>
+
+<div class="nav-shell" id="top">
+  <header class="nav">
+    <div class="nav__left-mobile">
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#products">Products</a>
+      <a href="#custom">Custom</a>
+      <a href="#why">Why us</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="logo" href="#top" aria-label="Botanical Extracts Pro — home">
+      <span class="logo__main">BOTANICAL</span>
+      <span class="logo__sub">EXTRACTS PRO</span>
+    </a>
+    <div class="nav__right">
+      <span class="lang" title="Language">EN</span>
+      <a class="btn btn--sm" href="#quote">Get a quote <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </header>
+</div>
+<nav class="drawer" id="drawer" aria-label="Mobile">
+  <a href="#products">Products</a>
+  <a href="#custom">Custom production</a>
+  <a href="#why">Why us</a>
+  <a href="#process">How it works</a>
+  <a href="#approach">Our approach</a>
+  <a href="#faq">FAQ</a>
+  <a class="btn" href="#quote">Get a quote <svg><use href="#i-arrow"/></svg></a>
+</nav>
+
+<main>
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__media"><img src="images/hero-rose.jpg" alt="Hands holding a freshly picked Damask rose in a Bulgarian rose field" fetchpriority="high"></div>
+    <div class="hero__content">
+      <h1 class="display" id="hero-title" data-split>Natural ingredients, <em>from our land</em> to <span class="nw">your <em>formula.</em></span></h1>
+      <p class="hero__sub">Essential oils, absolutes, CO₂ extracts, concretes and hydrolates, produced in France and Bulgaria for perfumery, cosmetics and aromatherapy.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--white" href="#quote">Request a quote <svg><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--ghost" href="#products">Explore materials</a>
+      </div>
+    </div>
+    <ul class="hero__proof" aria-label="Key facts">
+      <li class="chip"><svg><use href="#i-check"/></svg>12 years of expertise</li>
+      <li class="chip"><svg><use href="#i-check"/></svg>Own fields &amp; production</li>
+      <li class="chip"><svg><use href="#i-check"/></svg>Organic &amp; EU / US quality certificates</li>
+      <li class="chip"><svg><use href="#i-check"/></svg>Every batch traceable</li>
+    </ul>
+  </section>
+
+  <!-- Trust -->
+  <section class="trust" aria-label="Partners">
+    <div class="wrap">
+      <p class="eyebrow reveal">Trusted by perfumery professionals</p>
+      <div class="trust__row reveal d1">
+        <span class="trust__logo trust__logo--a">BONTOUX</span>
+        <span class="trust__logo trust__logo--b">Exaflor</span>
+        <span class="trust__logo trust__logo--c">SYNAROME</span>
+      </div>
+      <div class="trust__creds reveal d2">
+        <span class="cred"><i></i>Certificates of analysis</span>
+        <span class="cred"><i></i>Specifications &amp; SDS</span>
+        <span class="cred"><i></i>Origin &amp; batch documentation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="section" id="products" aria-labelledby="products-title">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="title reveal" id="products-title">Our natural <em>raw materials.</em></h2>
+        <p class="lede reveal d1">A professional range for buyers who know their materials. Regular and large B2B lots, stable quality from batch to batch.</p>
+      </div>
+      <ul class="products">
+        <li class="product reveal">
+          <div class="product__media"><img src="images/p-essential-oils.jpg" alt="Drop of golden essential oil" loading="lazy"></div>
+          <h3 class="product__name">Essential Oils</h3>
+          <p class="eyebrow product__kind">Steam distillation</p>
+          <p class="product__docs">Samples · CoA · SDS</p>
+          <a class="btn btn--block" href="#quote" data-interest="Essential Oils">Request price</a>
+        </li>
+        <li class="product reveal d1">
+          <div class="product__media"><span class="badge">Perfumery</span><img src="images/p-absolutes.jpg" alt="Damask rose bloom" loading="lazy"></div>
+          <h3 class="product__name">Absolutes</h3>
+          <p class="eyebrow product__kind">From concretes</p>
+          <p class="product__docs">Samples · CoA · SDS</p>
+          <a class="btn btn--block" href="#quote" data-interest="Absolutes">Request price</a>
+        </li>
+        <li class="product reveal d2">
+          <div class="product__media"><img src="images/p-co2.jpg" alt="Pink peppercorns and coriander seeds" loading="lazy"></div>
+          <h3 class="product__name">CO<span class="sub">2</span> Extracts</h3>
+          <p class="eyebrow product__kind">Supercritical CO₂</p>
+          <p class="product__docs">Samples · CoA · SDS</p>
+          <a class="btn btn--block" href="#quote" data-interest="CO₂ Extracts">Request price</a>
+        </li>
+        <li class="product reveal d3">
+          <div class="product__media"><img src="images/p-concretes.jpg" alt="Floral concrete with jasmine flowers" loading="lazy"></div>
+          <h3 class="product__name">Concretes</h3>
+          <p class="eyebrow product__kind">Fresh flower extraction</p>
+          <p class="product__docs">Samples · CoA · SDS</p>
+          <a class="btn btn--block" href="#quote" data-interest="Concretes">Request price</a>
+        </li>
+        <li class="product reveal">
+          <div class="product__media"><span class="badge badge--olive">Cosmetics</span><img src="images/p-hydrolates.jpg" alt="Clary sage leaf with water droplets" loading="lazy"></div>
+          <h3 class="product__name">Hydrolates</h3>
+          <p class="eyebrow product__kind">Aromatic waters</p>
+          <p class="product__docs">Samples · CoA · SDS</p>
+          <a class="btn btn--block" href="#quote" data-interest="Hydrolates">Request price</a>
+        </li>
+        <li class="product reveal d1">
+          <div class="product__media"><img src="images/p-waxes.jpg" alt="Flakes of natural floral wax" loading="lazy"></div>
+          <h3 class="product__name">Plant Waxes</h3>
+          <p class="eyebrow product__kind">Floral &amp; plant waxes</p>
+          <p class="product__docs">Samples · CoA · SDS</p>
+          <a class="btn btn--block" href="#quote" data-interest="Plant Waxes">Request price</a>
+        </li>
+        <li class="product reveal d2">
+          <div class="product__media"><span class="badge badge--terra">Made to order</span><img src="images/p-custom.jpg" alt="Dried immortelle flowers" loading="lazy"></div>
+          <h3 class="product__name">Custom Production</h3>
+          <p class="eyebrow product__kind">To your technical brief</p>
+          <p class="product__docs">Your volume · Your specification</p>
+          <a class="btn btn--block btn--ink" href="#custom">How it works</a>
+        </li>
+        <li class="product product--cta reveal d3">
+          <div class="product__media">
+            <svg class="flower"><use href="#i-flower"/></svg>
+            <div>
+              <p class="title">Can't find it? <em>We'll source it.</em></p>
+              <p>Rare, seasonal or specific ingredients through our producer network in France and Bulgaria.</p>
+            </div>
+          </div>
+          <a class="btn btn--block btn--ink" href="#quote" data-interest="Custom production & sourcing">Ask our team <svg><use href="#i-arrow"/></svg></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Custom production -->
+  <section class="section" id="custom" aria-labelledby="custom-title">
+    <div class="wrap split">
+      <div class="split__media reveal-img">
+        <img src="images/s-custom.jpg" alt="Perfumer holding a vial of golden essential oil in sunlight" loading="lazy">
+        <div class="floating-tag"><b>FR·BG</b>Producer network</div>
+      </div>
+      <div class="split__body reveal d1">
+        <p class="eyebrow">Custom production &amp; sourcing</p>
+        <h2 class="title" id="custom-title">Your brief. <em>Our fields.</em></h2>
+        <p class="lede">From finding the ingredient you need to producing it and organising supply to your technical requirements and volumes.</p>
+        <ul class="checks">
+          <li><svg><use href="#i-check"/></svg>Essential oils, absolutes, concretes, CO₂ extracts &amp; hydrolates made to your specification</li>
+          <li><svg><use href="#i-check"/></svg>Selection by origin, quality and specification</li>
+          <li><svg><use href="#i-check"/></svg>Sourcing of rare, seasonal and off-catalogue ingredients</li>
+          <li><svg><use href="#i-check"/></svg>B2B lots for regular or large-scale supply, with batch QC and documentation</li>
+        </ul>
+        <a class="btn" href="#quote" data-interest="Custom production & sourcing">Discuss your project <svg><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <div class="marquee__item">From the land <em>to the ingredient.</em><svg><use href="#i-flower"/></svg>Quality<svg><use href="#i-flower"/></svg><em>Traceability</em><svg><use href="#i-flower"/></svg>Expertise<svg><use href="#i-flower"/></svg></div>
+      <div class="marquee__item">From the land <em>to the ingredient.</em><svg><use href="#i-flower"/></svg>Quality<svg><use href="#i-flower"/></svg><em>Traceability</em><svg><use href="#i-flower"/></svg>Expertise<svg><use href="#i-flower"/></svg></div>
+    </div>
+  </div>
+
+  <!-- Why us -->
+  <section class="section" id="why" aria-labelledby="why-title">
+    <div class="wrap features-grid">
+      <div>
+        <h2 class="title reveal" id="why-title">Why perfumers <em>choose us.</em></h2>
+        <ul class="features">
+          <li class="feature reveal">
+            <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"><path d="M5 19L6 8l13-3-3 13z"/><path d="M5 19l8-8"/></svg></span>
+            <h3 class="eyebrow">Own land &amp; production</h3>
+            <p>Our own fields and partner farms.</p>
+          </li>
+          <li class="feature reveal d1">
+            <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"><path d="M9 3h6M10 3v6L4 21h16L14 9V3"/><path d="M7 15h10"/></svg></span>
+            <h3 class="eyebrow">Controlled quality</h3>
+            <p>Every batch checked and fully traceable.</p>
+          </li>
+          <li class="feature reveal">
+            <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg></span>
+            <h3 class="eyebrow">Full documentation</h3>
+            <p>CoA, specs, SDS and organic certificates.</p>
+          </li>
+          <li class="feature reveal d1">
+            <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg></span>
+            <h3 class="eyebrow">Flexible volumes</h3>
+            <p>From a single sample to industrial lots.</p>
+          </li>
+          <li class="feature reveal">
+            <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"><path d="M3 11l18-8-8 18-2-8z"/><path d="M11 13l10-10"/></svg></span>
+            <h3 class="eyebrow">Fast logistics</h3>
+            <p>Delivery across Europe and worldwide.</p>
+          </li>
+          <li class="feature reveal d1">
+            <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8"/></svg></span>
+            <h3 class="eyebrow">Direct communication</h3>
+            <p>A direct line to product experts.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="split__media reveal-img">
+        <img src="images/s-harvest.jpg" alt="Harvesting immortelle flowers into a basket" loading="lazy">
+        <div class="floating-tag"><b>12</b>Years at the source</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section section--tight" aria-label="Key figures">
+    <div class="wrap">
+      <ul class="stats">
+        <li class="stat reveal"><span class="stat__num" data-count="12">12</span><span class="stat__label">Years of experience</span><span class="stat__note">In natural aromatic ingredients</span></li>
+        <li class="stat reveal d1"><span class="stat__num" data-count="2">2</span><span class="stat__label">Countries of production</span><span class="stat__note">France &amp; Bulgaria</span></li>
+        <li class="stat reveal d2"><span class="stat__num" data-count="6">6</span><span class="stat__label">Ingredient families</span><span class="stat__note">From essential oils to waxes</span></li>
+        <li class="stat reveal d3"><span class="stat__num"><span data-count="100">100</span><em>%</em></span><span class="stat__label">Batch traceability</span><span class="stat__note">Documented from field to delivery</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section" id="process" aria-labelledby="process-title">
+    <div class="wrap">
+      <div class="head head--center">
+        <p class="eyebrow reveal">Simple for your purchasing team</p>
+        <h2 class="title reveal d1" id="process-title">How it <em>works.</em></h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal"><span class="step__num">1</span><h3>Send your request</h3><p>Materials, volumes, specifications and the documents you need.</p></li>
+        <li class="step reveal d1"><span class="step__num">2</span><h3>Samples &amp; documents</h3><p>We confirm availability and send samples with CoA, specification and SDS.</p></li>
+        <li class="step reveal d2"><span class="step__num">3</span><h3>Approve &amp; order</h3><p>Once your lab approves, we agree terms for a single lot or regular supply.</p></li>
+        <li class="step reveal d3"><span class="step__num">4</span><h3>Traceable delivery</h3><p>Every batch arrives documented and traceable, across Europe and worldwide.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Approach -->
+  <section class="section" id="approach" aria-labelledby="approach-title">
+    <div class="wrap split split--rev">
+      <div class="split__media reveal-img">
+        <img src="images/s-field.jpg" alt="Clary sage and lavender fields in Provence" loading="lazy">
+      </div>
+      <div class="split__body reveal d1">
+        <p class="eyebrow">Our approach</p>
+        <h2 class="title" id="approach-title">Grown with <em>respect.</em></h2>
+        <p class="lede">For us, a natural ingredient's quality is more than its technical and olfactory profile. It is also its origin, care for nature, responsible use of resources and ethical production.</p>
+        <ul class="checks">
+          <li><svg><use href="#i-check"/></svg>Responsible farming that protects soil, water and natural resources</li>
+          <li><svg><use href="#i-check"/></svg>Lower environmental impact at every stage of production</li>
+          <li><svg><use href="#i-check"/></svg>Ethical sourcing: no child or forced labour, and we require the same of our partners</li>
+          <li><svg><use href="#i-check"/></svg>Long-term partnerships with verified farms and producers</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee marquee--terra" aria-hidden="true">
+    <div class="marquee__track">
+      <div class="marquee__item">Essential oils<svg><use href="#i-flower"/></svg><em>Absolutes</em><svg><use href="#i-flower"/></svg><span>CO<span class="sub">2</span> extracts</span><svg><use href="#i-flower"/></svg><em>Concretes</em><svg><use href="#i-flower"/></svg>Hydrolates<svg><use href="#i-flower"/></svg><em>Plant waxes</em><svg><use href="#i-flower"/></svg></div>
+      <div class="marquee__item">Essential oils<svg><use href="#i-flower"/></svg><em>Absolutes</em><svg><use href="#i-flower"/></svg><span>CO<span class="sub">2</span> extracts</span><svg><use href="#i-flower"/></svg><em>Concretes</em><svg><use href="#i-flower"/></svg>Hydrolates<svg><use href="#i-flower"/></svg><em>Plant waxes</em><svg><use href="#i-flower"/></svg></div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq-grid">
+      <div class="faq-head reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2 class="title" id="faq-title">Questions, <em>answered.</em></h2>
+        <p class="lede">Still unsure? Write to us on WhatsApp and get a direct answer from our team.</p>
+        <a class="btn btn--line" href="https://wa.me/33658651354" target="_blank" rel="noopener">Ask on WhatsApp <svg><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="faq">
+        <details name="faq" class="reveal" open>
+          <summary>How do you guarantee quality?<span class="faq__plus" aria-hidden="true"></span></summary>
+          <p class="faq__a">Every batch is controlled and fully traceable: origin, batch number and production method are documented. We work only with carefully selected producers and monitor consistency from one batch to the next.</p>
+        </details>
+        <details name="faq" class="reveal d1">
+          <summary>Which analyses and documents do you provide?<span class="faq__plus" aria-hidden="true"></span></summary>
+          <p class="faq__a">Depending on the product and your requirements: certificate of analysis, technical specification, SDS, origin and production information, and organic certification where applicable.</p>
+        </details>
+        <details name="faq" class="reveal d1">
+          <summary>Can I receive a sample?<span class="faq__plus" aria-hidden="true"></span></summary>
+          <p class="faq__a">Yes. Samples are available so your team can evaluate materials before ordering. Send us the list of materials you are interested in and their intended application.</p>
+        </details>
+        <details name="faq" class="reveal d2">
+          <summary>What is the minimum order quantity?<span class="faq__plus" aria-hidden="true"></span></summary>
+          <p class="faq__a">Minimum volumes depend on the product, season and harvest. We work with both regular and large industrial lots. Tell us your needs and we will propose suitable terms.</p>
+        </details>
+        <details name="faq" class="reveal d2">
+          <summary>How long does delivery take?<span class="faq__plus" aria-hidden="true"></span></summary>
+          <p class="faq__a">Materials in stock ship quickly across Europe and internationally. Lead times for custom production depend on the season and volume and are confirmed with each quotation.</p>
+        </details>
+        <details name="faq" class="reveal d3">
+          <summary>Can you produce to our specification?<span class="faq__plus" aria-hidden="true"></span></summary>
+          <p class="faq__a">Yes. We produce essential oils, absolutes, concretes, CO₂ extracts and hydrolates to your technical brief, and source rare or seasonal ingredients through our network in France and Bulgaria.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="section" id="quote" aria-labelledby="quote-title">
+    <div class="wrap">
+      <div class="quote reveal">
+        <aside class="quote__aside">
+          <img src="images/s-samples.jpg" alt="Amber sample vials with rose petals and lavender" loading="lazy">
+          <h2 class="title" id="quote-title">Request a <em>quote.</em></h2>
+          <p>Tell us what you need. We reply directly with availability, documentation and a sample proposal.</p>
+          <div class="contact-list">
+            <a class="contact-pill" href="https://wa.me/33658651354" target="_blank" rel="noopener"><b><svg><use href="#i-wa"/></svg></b><span><small>WhatsApp</small>+33 6 58 65 13 54</span></a>
+            <a class="contact-pill" href="mailto:emilia.a@botanicalextracts.pro"><b><svg><use href="#i-mail"/></svg></b><span><small>Email</small>emilia.a@botanicalextracts.pro</span></a>
+            <span class="contact-pill"><b><svg><use href="#i-pin"/></svg></b><span><small>Production</small>France · Bulgaria</span></span>
+          </div>
+        </aside>
+
+        <form class="form" id="request-form" novalidate>
+          <p class="eyebrow">B2B request · takes 1 minute</p>
+          <input type="hidden" name="interest" value="">
+          <div class="field">
+            <label for="f-name">Name *</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="f-company">Company *</label>
+            <input id="f-company" name="company" type="text" autocomplete="organization" placeholder="Company name" required>
+          </div>
+          <div class="field">
+            <label for="f-email">Work email *</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" placeholder="name@company.com" required>
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone / WhatsApp</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+33 …">
+          </div>
+          <label class="consent"><input type="checkbox" name="consent" required> I agree that my data will be used to answer this request.</label>
+          <div class="form__foot">
+            <button class="btn btn--block" type="submit">Send my request <svg><use href="#i-arrow"/></svg></button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="footer-shell">
+  <footer class="footer">
+    <div class="footer__top">
+      <div>
+        <svg class="footer__flower"><use href="#i-flower"/></svg>
+        <p class="title">Let's build your <em>supply.</em></p>
+        <div class="footer__ctas">
+          <a class="btn btn--white" href="#quote">Request a quote <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--ghost" href="https://wa.me/33658651354" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <h3>Products</h3>
+          <ul>
+            <li><a href="#products">Essential Oils</a></li>
+            <li><a href="#products">Absolutes</a></li>
+            <li><a href="#products">CO₂ Extracts</a></li>
+            <li><a href="#products">Concretes</a></li>
+            <li><a href="#products">Hydrolates</a></li>
+            <li><a href="#products">Plant Waxes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#custom">Custom production</a></li>
+            <li><a href="#why">Why us</a></li>
+            <li><a href="#process">How it works</a></li>
+            <li><a href="#approach">Our approach</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:emilia.a@botanicalextracts.pro">Email us</a></li>
+            <li><a href="https://wa.me/33658651354" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li>France · Bulgaria</li>
+            <li>Language: EN</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="wordmark" aria-hidden="true"><span>B</span><span>O</span><span>T</span><span>A</span><span>N</span><span>I</span><span>C</span><span>A</span><span>L</span></p>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> Botanical Extracts Pro. Premium natural raw materials.</span>
+      <span>B2B Supply · Europe &amp; International</span>
+    </div>
+  </footer>
+</div>
+
+<a class="wa" href="https://wa.me/33658651354" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <b><svg><use href="#i-wa"/></svg></b><span class="wa__label">Chat with us</span>
+</a>
+
+<script>
+(() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  $('#year').textContent = new Date().getFullYear();
+
+  // Promo bar: its height is subtracted from the hero so the first screen fits the viewport
+  const promo = $('#promo');
+  const setPromoH = () => document.documentElement.style.setProperty('--promo-h', promo.offsetHeight + 'px');
+  setPromoH();
+  window.addEventListener('resize', setPromoH);
+  $('.promo__close').addEventListener('click', () => { promo.classList.add('is-hidden'); setPromoH(); });
+
+  // Keep the last two words of every text block together, so no line ends up with a single word
+  const WORD = /[\p{L}\p{N}]/u;
+  const glueLastWords = (el) => {
+    const nodes = [];
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    let n; while ((n = walker.nextNode())) if (!n.parentElement.closest('svg')) nodes.push(n);
+    const tokens = [];
+    nodes.forEach((node) => { const re = /[^\s\u00A0]+/g; let m; while ((m = re.exec(node.data))) tokens.push({ node, a: m.index, z: m.index + m[0].length, word: WORD.test(m[0]) }); });
+    const real = tokens.map((t, i) => t.word ? i : -1).filter((i) => i >= 0);
+    if (real.length < 2) return;
+    const from = real[real.length - 2], to = real[real.length - 1];
+    // replace every breakable space between the second-to-last and last real word with a non-breaking one
+    for (let i = to; i > from; i--) {
+      const cur = tokens[i], prev = tokens[i - 1];
+      if (cur.node === prev.node) {
+        const gap = cur.node.data.slice(prev.z, cur.a);
+        cur.node.data = cur.node.data.slice(0, prev.z) + gap.replace(/\s+/g, '\u00A0') + cur.node.data.slice(cur.a);
+      } else {
+        prev.node.data = prev.node.data.slice(0, prev.z) + prev.node.data.slice(prev.z).replace(/\s+/g, '\u00A0');
+        cur.node.data = cur.node.data.slice(0, cur.a).replace(/\s+/g, '\u00A0') + cur.node.data.slice(cur.a);
+      }
+    }
+  };
+  $$('p, h1:not([data-split]), h2, h3, li, summary, label, .btn, .chip, .cred, .stat__label, .stat__note, .eyebrow, .floating-tag, .contact-pill > span, .footer__bottom > span, .promo a > span')
+    .forEach(glueLastWords);
+
+  // Hero headline: split into words for a staggered rise
+  let wordIndex = 0;
+  const splitNode = (node) => {
+    [...node.childNodes].forEach((n) => {
+      if (n.nodeType !== 3) { splitNode(n); return; }
+      const frag = document.createDocumentFragment();
+      n.textContent.split(/([ \t\n\r]+)/).forEach((part) => {
+        if (!part) return;
+        if (/^[ \t\n\r]+$/.test(part)) { frag.append(' '); return; }
+        const w = document.createElement('span'); w.className = 'w';
+        const inner = document.createElement('span'); inner.textContent = part;
+        inner.style.animationDelay = (0.15 + wordIndex++ * 0.07) + 's';
+        w.append(inner); frag.append(w);
+      });
+      n.replaceWith(frag);
+    });
+  };
+  splitNode($('[data-split]'));
+
+  // Nav: shadow on scroll, hide on scroll down, show on scroll up
+  const shell = $('.nav-shell');
+  const wa = $('.wa');
+  const onScroll = () => {
+    const y = window.scrollY;
+    shell.classList.toggle('is-scrolled', y > 20);
+    wa.classList.toggle('is-visible', y > 700);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Mobile drawer
+  const burger = $('.burger');
+  const setOpen = (open) => {
+    shell.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.classList.toggle('no-scroll', open);
+  };
+  burger.addEventListener('click', () => setOpen(!shell.classList.contains('is-open')));
+  $$('#drawer a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    });
+  }, { rootMargin: '0px 0px -10% 0px' });
+  $$('.reveal, .reveal-img, .wordmark').forEach((el) => io.observe(el));
+
+  // Wordmark letter stagger
+  $$('.wordmark span').forEach((s, k) => { s.style.transitionDelay = (k * 0.05) + 's'; });
+
+  // Counters
+  const easeOut = (t) => 1 - Math.pow(1 - t, 4);
+  const counters = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      counters.unobserve(e.target);
+      const el = e.target, end = +el.dataset.count, t0 = performance.now(), dur = 1600;
+      const tick = (t) => {
+        const p = Math.min((t - t0) / dur, 1);
+        el.textContent = Math.round(end * easeOut(p));
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: .6 });
+  $$('[data-count]').forEach((el) => counters.observe(el));
+
+  // Active nav link
+  const links = $$('.nav__links a');
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      links.forEach((l) => l.classList.toggle('is-active', l.getAttribute('href') === '#' + e.target.id));
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  $$('main section[id]').forEach((s) => spy.observe(s));
+
+  // FAQ: only one answer open at a time
+  const faqItems = $$('.faq details');
+  faqItems.forEach((d) => d.addEventListener('toggle', () => {
+    if (d.open) faqItems.forEach((o) => { if (o !== d) o.open = false; });
+  }));
+
+  // Product buttons remember which product the visitor asked about
+  const interestField = $('#request-form input[name="interest"]');
+  $$('[data-interest]').forEach((btn) => btn.addEventListener('click', () => { interestField.value = btn.dataset.interest; }));
+
+  // Form → opens the visitor's mail client with a prefilled request
+  const form = $('#request-form');
+  const status = $('.form__status', form);
+  form.addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      status.textContent = 'Please fill in the required fields.';
+      return;
+    }
+    const d = new FormData(form);
+    const interest = d.get('interest') || 'General enquiry';
+    const body = [
+      `Name: ${d.get('name')}`,
+      `Company: ${d.get('company')}`,
+      `Email: ${d.get('email')}`,
+      `Phone / WhatsApp: ${d.get('phone') || '-'}`,
+      `Interested in: ${interest}`
+    ].join('\n');
+    const subject = `B2B request: ${interest} (${d.get('company')})`;
+    window.location.href = `mailto:emilia.a@botanicalextracts.pro?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    status.textContent = 'Thank you! Your email app will open with the request ready to send.';
+  });
+})();
+</script>
+</body>
+</html>

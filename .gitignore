@@ -1,0 +1,23 @@
+# Dependencies and local output
+node_modules/
+temporary screenshots/
+ref/
+.DS_Store
+
+# Internal working files (brief, design references, assistant instructions)
+Бриф_Emiliia.txt
+desktop.png
+desktop 2.png
+CLAUDE.md
+SKILL.md
+SKILL canvas.md
+GEMINI_IMAGE_GENERATION.md
+
+# Previous version and the images only it uses
+index-v1.html
+images/hero.jpg
+images/approach.jpg
+images/b-distillery.jpg
+images/b-fields.jpg
+images/b-lab.jpg
+images/b-perfumer.jpg

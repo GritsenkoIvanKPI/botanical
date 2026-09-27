@@ -1,0 +1,8 @@
+{
+  "name": "botanical-extracts-pro",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "puppeteer": "^25.2.1"
+  }
+}
