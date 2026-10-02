@@ -6,6 +6,7 @@
 <title>Botanical Extracts Pro — Natural Raw Materials for Perfumery & Cosmetics</title>
 <meta name="description" content="B2B producer and supplier of essential oils, absolutes, CO₂ extracts, concretes, hydrolates and plant waxes. Own production in France and Bulgaria, full batch traceability, samples and documentation, custom production and sourcing.">
 <link rel="alternate" hreflang="en" href="/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Marcellus&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
@@ -84,7 +85,7 @@ p, li, .lede { text-wrap: pretty; }
   position: relative; display: inline-flex; align-items: center; justify-content: center; gap: .625rem;
   min-height: 3rem; padding: .8125rem 1.625rem; border: 0; cursor: pointer;
   font: 700 .8125rem/1 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; text-decoration: none;
-  background: var(--olive); color: #fff;
+  background: var(--olive); color: #fff; text-align: center; text-wrap: balance; line-height: 1.35;
   transition: transform .5s var(--spring), box-shadow .4s var(--ease), background-color .3s var(--ease), color .3s var(--ease);
 }
 .btn svg { width: 1rem; height: 1rem; transition: transform .45s var(--spring); }
@@ -227,36 +228,140 @@ p, li, .lede { text-wrap: pretty; }
 .cred:nth-child(2) i { background: var(--saffron); }
 .cred:nth-child(3) i { background: var(--terra); }
 
-/* ---------- Products ---------- */
-.products { display: grid; gap: var(--sp-4) 1.25rem; grid-template-columns: 1fr; }
-@media (min-width: 36rem) { .products { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 64rem) { .products { grid-template-columns: repeat(4, 1fr); gap: var(--sp-5) 2rem; } }
-.product { display: flex; flex-direction: column; text-align: center; container-type: inline-size; }
+/* ---------- Catalogue ---------- */
+.products { display: grid; gap: 1.25rem; }
+@media (min-width: 36rem) { .products { grid-template-columns: repeat(2, 1fr); gap: var(--sp-5) 1.25rem; } }
+@media (min-width: 64rem) { .products { grid-template-columns: repeat(3, 1fr); gap: var(--sp-5) 2rem; } }
+@media (min-width: 75rem) { .products { grid-template-columns: repeat(4, 1fr); } }
+.product { display: flex; flex-direction: column; text-align: center; }
 .product__media { position: relative; aspect-ratio: 1 / 1.1; overflow: hidden; background: var(--card); box-shadow: var(--shadow-1); transition: transform .6s var(--spring), box-shadow .5s var(--ease); }
+.product__media[data-dialog] { cursor: pointer; }
 .product__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
 .product:hover .product__media { transform: translateY(-6px); box-shadow: var(--shadow-2); }
 .product:hover .product__media img { transform: scale(1.06); }
 .badge { position: absolute; z-index: 1; top: .875rem; right: .875rem; padding: .4375rem .8125rem; font: 700 .6875rem/1 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; background: var(--saffron); }
 .badge--olive { background: var(--olive); color: #fff; }
 .badge--terra { background: var(--terra); color: #fff; }
-.product__name { margin-top: 1.125rem; font: 400 1.625rem/1.2 var(--font-serif); letter-spacing: -.02em; }
-.product__kind { margin-top: .375rem; }
+.product__info { padding: 1.125rem 0 1.25rem; }
+.product__num { display: block; font: italic 400 1.0625rem/1 var(--font-serif); color: var(--muted); }
+.product__name { margin-top: .5rem; font: 400 1.5rem/1.2 var(--font-serif); letter-spacing: -.02em; }
+.product__kind { margin-top: .5rem; color: var(--muted); }
+.product__desc { max-width: 22rem; margin: .75rem auto 0; font-size: .9375rem; line-height: 1.55; color: var(--muted); }
+.product__keys { margin: 1rem auto 0; max-width: 22rem; padding-top: .875rem; border-top: 1px solid rgba(23, 21, 15, .1); }
+.product__keys-label { display: block; margin-bottom: .375rem; font: 700 .6875rem/1.3 var(--font-sans); letter-spacing: .12em; text-transform: uppercase; color: var(--olive); }
+.product__keys ul { display: flex; flex-wrap: wrap; justify-content: center; gap: .125rem 0; font-size: .875rem; font-weight: 600; line-height: 1.5; }
+.product__keys li { white-space: nowrap; }
+.product__keys li:not(:last-child)::after { content: "·"; margin: 0 .5rem; color: var(--muted); font-weight: 400; }
 .sub { font-size: .62em; position: relative; top: .28em; line-height: 0; }
-.product__docs { margin: .5rem 0 1rem; font-size: .875rem; color: var(--muted); }
 .product .btn { margin-top: auto; }
 
-.product--cta .product__media { display: flex; flex-direction: column; justify-content: space-between; flex: 1 0 auto; aspect-ratio: auto; min-height: calc(110cqw + var(--cta-extra, 6.25rem)); padding: var(--sp-4) var(--sp-3); text-align: left; background: var(--saffron); box-shadow: none; }
+.product--cta .product__media { display: flex; flex-direction: column; justify-content: space-between; flex: 1 0 auto; aspect-ratio: auto; min-height: 18rem; padding: var(--sp-4) var(--sp-3); margin-bottom: 1.25rem; text-align: left; background: var(--saffron); box-shadow: none; }
 .product--cta .title { font-size: clamp(1.875rem, 2.6vw, 2.375rem); margin-bottom: .75rem; }
 .product--cta p { font-size: .9375rem; }
 .product--cta .flower { width: 3rem; height: 3rem; animation: spin 18s linear infinite; }
-.product--cta .btn { margin-top: 1.125rem; }
 @keyframes spin { to { transform: rotate(360deg); } }
+
+/* Phones: compact rows (photo beside the name, button underneath) */
+@media (max-width: 35.99rem) {
+  .product { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 1rem 1.125rem; align-items: center; text-align: left; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(23, 21, 15, .1); }
+  .product__media { aspect-ratio: 1; }
+  .product__media .badge { display: none; }
+  .product__info { padding: 0; min-width: 0; }
+  .product__name { font-size: 1.3125rem; margin-top: .375rem; }
+  .product__kind { margin-top: .375rem; }
+  .product__desc { margin: .5rem 0 0; font-size: .875rem; line-height: 1.5; }
+  .product__keys { margin: .625rem 0 0; padding-top: .625rem; }
+  .product__keys ul { justify-content: flex-start; font-size: .8125rem; }
+  .product .btn { grid-column: 1 / -1; margin-top: 0; }
+  .product--cta { display: flex; border-bottom: 0; }
+  .product--cta .product__media { min-height: 0; gap: 1.5rem; margin-bottom: 1rem; }
+}
+
+@media (max-width: 22.5rem) { .product { grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1rem .875rem; } .product__kind { letter-spacing: .08em; } }
+
+/* Supply formats */
+.supply { display: grid; gap: var(--sp-4); padding: var(--sp-5) var(--sp-3); background: var(--ink); color: #fff; }
+@media (min-width: 48rem) { .supply { padding: var(--sp-5); } }
+@media (min-width: 64rem) { .supply { grid-template-columns: 1fr 1.15fr; gap: var(--sp-4) 4rem; align-items: center; } }
+.supply .eyebrow { color: var(--olive-light); margin-bottom: .75rem; }
+.supply__title { font: 400 clamp(1.75rem, 3vw, 2.5rem)/1.12 var(--font-serif); letter-spacing: -.03em; margin-bottom: 1rem; }
+.supply__title em { font-style: italic; }
+.supply__text > p:last-child { color: rgba(255, 255, 255, .78); }
+.section--tight-top { padding-top: 0; }
+.supply__grid { display: grid; gap: .625rem; }
+.supply__sizes { display: grid; grid-template-columns: repeat(2, 1fr); gap: .625rem; }
+@media (min-width: 36rem) { .supply__sizes { grid-template-columns: repeat(4, 1fr); } }
+.supply__sizes li { display: flex; flex-direction: column; justify-content: center; min-height: 5.5rem; padding: .875rem 1rem; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .22); font-size: .8125rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: rgba(255, 255, 255, .78); }
+.supply__sizes b { display: block; font: 400 2.25rem/1 var(--font-serif); letter-spacing: -.02em; text-transform: none; color: #fff; margin-bottom: .25rem; }
+.supply__size--wide { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem .75rem; padding: 1rem; background: rgba(205, 212, 121, .1); box-shadow: inset 0 0 0 1px rgba(205, 212, 121, .35); font-size: .8125rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: rgba(255, 255, 255, .78); }
+.supply__size--wide b { font: 400 2.25rem/1 var(--font-serif); letter-spacing: -.02em; text-transform: none; color: #fff; }
+.supply__wide-label { flex-basis: 100%; text-transform: none; letter-spacing: 0; font-weight: 600; font-size: .9375rem; color: var(--olive-light); }
+.supply__sizes li { text-transform: none !important; letter-spacing: .02em !important; }
+.supply__note { grid-column: 1 / -1; padding-top: var(--sp-4); border-top: 1px solid rgba(255, 255, 255, .14); color: rgba(255, 255, 255, .78); }
+.wholesale { grid-column: 1 / -1; display: grid; gap: var(--sp-4); padding: var(--sp-4) var(--sp-3); background: var(--olive); color: #fff; }
+@media (min-width: 48rem) { .wholesale { padding: var(--sp-4); } }
+@media (min-width: 64rem) { .wholesale { grid-template-columns: 1fr auto; align-items: center; gap: var(--sp-4) 3rem; } }
+.wholesale__title { font: 400 clamp(1.625rem, 2.6vw, 2.125rem)/1.15 var(--font-serif); letter-spacing: -.02em; margin-bottom: .5rem; }
+.wholesale__title em { font-style: italic; }
+.wholesale__text > p { color: rgba(255, 255, 255, .88); }
+.wholesale__list { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+.wholesale__list li { padding: .5rem .875rem; font-size: .875rem; font-weight: 600; background: rgba(255, 255, 255, .14); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .3); }
+.wholesale__actions { display: grid; gap: .75rem; justify-items: stretch; }
+.wholesale__email { display: flex; align-items: center; gap: .75rem; padding: .625rem 1rem .625rem .625rem; color: #fff; text-decoration: none; font-weight: 600; overflow-wrap: anywhere; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .4); transition: background-color .3s var(--ease), transform .5s var(--spring); }
+.wholesale__email:hover { background: rgba(255, 255, 255, .12); }
+.wholesale__email:active { transform: scale(.98); }
+.wholesale__email svg { flex: none; width: 2.25rem; height: 2.25rem; padding: .5rem; background: #fff; color: var(--olive); }
+.wholesale__email small { display: block; font-size: .75rem; font-weight: 500; opacity: .85; }
+@media (max-width: 35.99rem) { .supply { padding-left: 1.25rem; padding-right: 1.25rem; } .wholesale { padding: 1.5rem 1rem; } .wholesale__email { font-size: .875rem; gap: .625rem; padding-right: .625rem; overflow-wrap: normal; white-space: nowrap; } }
+@media (max-width: 24rem) { .supply { padding-left: 1rem; padding-right: 1rem; } .wholesale { padding: 1.25rem .75rem; } .wholesale__email { font-size: .75rem; gap: .5rem; } .wholesale__email svg { width: 2rem; height: 2rem; } }
+.supply__note strong { color: #fff; font-weight: 600; }
+.supply__foot { display: grid; gap: 1.25rem; justify-items: start; }
+@media (min-width: 64rem) { .supply__foot { grid-column: 1 / -1; grid-template-columns: 1fr auto; align-items: center; padding-top: var(--sp-4); border-top: 1px solid rgba(255, 255, 255, .14); } }
+.supply__foot p { color: rgba(255, 255, 255, .78); }
+@media (max-width: 35.99rem) { .supply__foot { justify-items: stretch; } }
+
+/* Category panel */
+.cat-dialog { width: min(58rem, calc(100% - 2rem)); max-width: none; max-height: min(88vh, 54rem); margin: auto; padding: 0; border: 0; background: #fff; color: var(--ink); box-shadow: 0 30px 80px -20px rgba(0, 0, 0, .45); overflow: hidden; }
+.cat-dialog::backdrop { background: rgba(23, 21, 15, .62); }
+.cat-dialog[open] { animation: dialogIn .5s var(--ease) both; }
+.cat-dialog[open]::backdrop { animation: fadeIn .4s var(--ease) both; }
+@keyframes dialogIn { from { opacity: 0; transform: translateY(1.5rem); } to { opacity: 1; transform: none; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.cat-dialog__inner { position: relative; max-height: inherit; overflow-y: auto; overscroll-behavior: contain; padding: var(--sp-5) var(--sp-3) var(--sp-4); }
+@media (min-width: 48rem) { .cat-dialog__inner { padding: var(--sp-5) var(--sp-5) var(--sp-4); } }
+.cat-dialog__close { position: absolute; top: 1rem; right: 1rem; display: grid; place-items: center; width: 3rem; height: 3rem; border: 0; background: var(--blush); cursor: pointer; transition: transform .45s var(--spring), background-color .3s var(--ease); }
+.cat-dialog__close:hover { transform: rotate(90deg); background: var(--blush-deep); }
+.cat-dialog__close:active { transform: rotate(90deg) scale(.92); }
+.cat-dialog__num { color: var(--muted); margin-bottom: .75rem; padding-right: 3.5rem; }
+.cat-dialog__title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; padding-right: 3rem; }
+.cat-dialog .lede { max-width: 44rem; }
+.cat-dialog__stat { display: inline-block; margin-top: 1.25rem; padding: .5rem .875rem; background: var(--olive); color: #fff; font-size: .8125rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.cat-dialog__label { margin: var(--sp-4) 0 1rem; }
+.cat-list { display: grid; gap: 0 2rem; border-top: 1px solid rgba(23, 21, 15, .1); }
+@media (min-width: 36rem) { .cat-list { grid-template-columns: repeat(2, 1fr); } }
+.cat-list li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .125rem 1rem; padding: .75rem 0; border-bottom: 1px solid rgba(23, 21, 15, .1); }
+.cat-list b { font-weight: 600; }
+.cat-list i { font-family: var(--font-serif); font-size: 1.0625rem; color: var(--muted); }
+.cat-more { margin-top: var(--sp-4); padding: 1.5rem; background: var(--blush); border-left: 3px solid var(--olive); }
+.cat-more__title { font: 400 1.625rem/1.2 var(--font-serif); letter-spacing: -.02em; margin-bottom: .5rem; }
+.cat-more p:not(.cat-more__title) { color: var(--muted); }
+.cat-list:not(.is-open) .is-extra { display: none; }
+.cat-list.is-open .is-extra { animation: fadeUp .45s var(--ease) both; }
+.cat-toggle { margin-top: 1.25rem; }
+@media (max-width: 35.99rem) { .cat-toggle { width: 100%; } }
+.cat-dialog__notes { display: grid; gap: .5rem; margin-top: var(--sp-4); color: var(--muted); }
+.cat-dialog__actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: var(--sp-4); padding-top: var(--sp-4); border-top: 1px solid rgba(23, 21, 15, .1); }
+@media (max-width: 35.99rem) {
+  .cat-dialog { width: 100%; height: 100%; max-height: 100dvh; }
+  .cat-dialog__inner { height: 100%; max-height: 100dvh; padding-top: 4.5rem; }
+  .cat-dialog__actions { flex-direction: column; }
+}
 
 /* ---------- Split ---------- */
 .split { display: grid; gap: var(--sp-4); align-items: center; }
 @media (min-width: 64rem) { .split { grid-template-columns: 1fr 1fr; gap: 2rem; } .split--rev .split__media { order: 2; } }
 /* Tablets and landscape phones: wider, shorter photos when stacked */
-@media (min-width: 36rem) and (max-width: 63.99rem) { .split .split__media, .features-grid .split__media { aspect-ratio: 16 / 10; } #approach .split__media img { object-position: center 22%; } }
+@media (min-width: 36rem) and (max-width: 63.99rem) { .split .split__media, .features-grid .split__media { aspect-ratio: 16 / 10; } #approach .split__media img { object-position: center 35%; } }
 /* Desktop: photo matches the height of the text column beside it */
 @media (min-width: 64rem) {
   .split, .features-grid { align-items: stretch; }
@@ -264,7 +369,7 @@ p, li, .lede { text-wrap: pretty; }
   .split .split__media img, .features-grid .split__media img { position: absolute; inset: 0; }
   .split__body { align-self: center; }
   .split:not(.split--rev) .split__body { padding-left: 2.5rem; }
-  #approach .split__media img { object-position: center 22%; }
+  #approach .split__media img { object-position: center 35%; }
 }
 .split__media { position: relative; overflow: hidden; aspect-ratio: 4 / 5; }
 .split__media img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.12); transition: transform 1.8s var(--ease); }
@@ -320,6 +425,27 @@ p, li, .lede { text-wrap: pretty; }
 .stat__num em { font-style: italic; }
 .stat__label { display: block; margin-top: .875rem; font-size: .9375rem; font-weight: 500; line-height: 1.4; }
 .stat__note { display: block; margin-top: .25rem; font: italic 400 1rem/1.4 var(--font-serif); color: var(--muted); }
+
+/* ---------- Certification ---------- */
+.certs { display: grid; gap: 1.25rem; }
+@media (min-width: 36rem) { .certs { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 75rem) { .certs { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; } }
+.cert { display: flex; flex-direction: column; padding: var(--sp-4) var(--sp-3); background: var(--card); box-shadow: var(--shadow-1); border-top: 3px solid var(--olive); }
+.cert:nth-child(2) { border-top-color: var(--saffron); }
+.cert:nth-child(3) { border-top-color: var(--terra); }
+.cert:nth-child(4) { border-top-color: var(--ink); }
+.cert__emblem { position: relative; display: grid; place-items: center; width: 4rem; height: 4rem; margin-bottom: var(--sp-3); background: var(--olive); color: #fff; }
+.cert:nth-child(2) .cert__emblem { background: var(--saffron); color: var(--ink); }
+.cert:nth-child(3) .cert__emblem { background: var(--terra); }
+.cert:nth-child(4) .cert__emblem { background: var(--ink); }
+.cert__emblem svg { width: 1.875rem; height: 1.875rem; }
+.cert__emblem::after { content: ""; position: absolute; inset: .3125rem; border: 1px solid currentColor; opacity: .35; }
+.cert__code { margin-bottom: .625rem; color: var(--muted); }
+.cert h3 { font: 400 1.5rem/1.2 var(--font-serif); letter-spacing: -.02em; margin-bottom: .625rem; }
+.cert p { font-size: .9375rem; line-height: 1.6; color: var(--muted); }
+.certs-cta { display: flex; justify-content: center; margin-top: var(--sp-5); }
+@media (max-width: 35.99rem) { .certs-cta .btn, .supply__foot .btn { font-size: .8125rem; letter-spacing: .02em; padding-left: .75rem; padding-right: .75rem; gap: .5rem; white-space: nowrap; } }
+@media (max-width: 24rem) { .certs-cta .btn, .supply__foot .btn { font-size: .75rem; letter-spacing: .01em; } .certs-cta .btn svg, .supply__foot .btn svg { display: none; } }
 
 /* ---------- Steps ---------- */
 .steps { display: grid; gap: 1.25rem; }
@@ -399,13 +525,17 @@ a.contact-pill:active { transform: scale(.98); }
 .footer { max-width: var(--wrap); margin: 0 auto; padding: var(--sp-5) var(--sp-3) var(--sp-4); background: var(--terra); color: #fff; overflow: hidden; }
 @media (min-width: 48rem) { .footer { padding: var(--sp-6) var(--sp-5) var(--sp-4); } }
 .footer__top { display: grid; gap: var(--sp-5); }
-@media (min-width: 64rem) { .footer__top { grid-template-columns: 1.2fr 1fr; } }
+@media (min-width: 80rem) { .footer__top { grid-template-columns: 1fr 1.25fr; } }
 .footer__flower { width: 2.5rem; height: 2.5rem; margin-bottom: var(--sp-3); animation: spin 20s linear infinite; }
 .footer .title { font-size: clamp(2rem, 3.4vw, 2.75rem); margin-bottom: var(--sp-3); }
 .footer__ctas { display: flex; flex-wrap: wrap; gap: .75rem; }
-.footer__cols { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-4) var(--sp-3); }
-@media (min-width: 48rem) { .footer__cols { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 22.5rem) { .footer { padding-left: 1.25rem; padding-right: 1.25rem; } .footer__cols { grid-template-columns: 1fr; } }
+.footer__cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-4) var(--sp-3); }
+.footer__cols > div:first-child { grid-column: 1 / -1; }
+.footer__cols > div:first-child ul { columns: 2; column-gap: var(--sp-3); }
+.footer__cols > div:first-child li { break-inside: avoid; }
+@media (min-width: 48rem) { .footer__cols { grid-template-columns: minmax(0, 1.5fr) repeat(2, minmax(0, 1fr)); } .footer__cols > div:first-child { grid-column: auto; } }
+@media (max-width: 24rem) { .footer__cols > div:first-child ul { columns: 1; } }
+@media (max-width: 22.5rem) { .footer { padding-left: 1.25rem; padding-right: 1.25rem; } .footer__cols { grid-template-columns: minmax(0, 1fr); } }
 .footer__top > * { min-width: 0; }
 .footer__cols h3 { font: 400 1.5rem/1.2 var(--font-serif); margin-bottom: 1rem; }
 .footer__cols li + li { margin-top: .375rem; }
@@ -493,8 +623,10 @@ a.contact-pill:active { transform: scale(.98); }
 </div>
 <nav class="drawer" id="drawer" aria-label="Mobile">
   <a href="#products">Products</a>
+  <a href="#delivery">Delivery formats</a>
   <a href="#custom">Custom production</a>
   <a href="#why">Why us</a>
+  <a href="#certification">Certification</a>
   <a href="#process">How it works</a>
   <a href="#approach">Our approach</a>
   <a href="#faq">FAQ</a>
@@ -504,7 +636,7 @@ a.contact-pill:active { transform: scale(.98); }
 <main>
   <!-- Hero -->
   <section class="hero" aria-labelledby="hero-title">
-    <div class="hero__media"><img src="images/hero-rose.jpg" alt="Hands holding a freshly picked Damask rose in a Bulgarian rose field" fetchpriority="high"></div>
+    <div class="hero__media"><img src="images/hero-fields.jpg" alt="Aerial view of lavender plantations with a mechanical harvester and an on-site distillery" fetchpriority="high"></div>
     <div class="hero__content">
       <h1 class="display" id="hero-title" data-split>Natural ingredients, <em>from our land</em> to <span class="nw">your <em>formula.</em></span></h1>
       <p class="hero__sub">Essential oils, absolutes, CO₂ extracts, concretes and hydrolates, produced in France and Bulgaria for perfumery, cosmetics and aromatherapy.</p>
@@ -542,57 +674,131 @@ a.contact-pill:active { transform: scale(.98); }
   <section class="section" id="products" aria-labelledby="products-title">
     <div class="wrap">
       <div class="head">
-        <h2 class="title reveal" id="products-title">Our natural <em>raw materials.</em></h2>
-        <p class="lede reveal d1">A professional range for buyers who know their materials. Regular and large B2B lots, stable quality from batch to batch.</p>
+        <div>
+          <p class="eyebrow reveal">Our range</p>
+          <h2 class="title reveal d1" id="products-title">Product <em>catalogue.</em></h2>
+        </div>
+        <p class="lede reveal d2">Botanical Extracts Pro offers natural plant-based ingredients from its own production, as well as products from trusted partners.</p>
       </div>
       <ul class="products">
         <li class="product reveal">
-          <div class="product__media"><img src="images/p-essential-oils.jpg" alt="Drop of golden essential oil" loading="lazy"></div>
-          <h3 class="product__name">Essential Oils</h3>
-          <p class="eyebrow product__kind">Steam distillation</p>
-          <p class="product__docs">Samples · CoA · SDS</p>
-          <a class="btn btn--block" href="#quote" data-interest="Essential Oils">Request price</a>
+          <div class="product__media" data-dialog="cat-essential-oils"><span class="badge badge--olive">60+ BIO</span><img src="images/p-essential-oils.jpg" alt="Stainless steel steam distillation stills in an essential oil distillery" loading="lazy"></div>
+          <div class="product__info">
+            <span class="product__num">01</span>
+            <h3 class="product__name">Natural Essential Oils</h3>
+            <p class="eyebrow product__kind">Conventional &amp; Organic / BIO</p>
+            <p class="product__desc">For perfumery, cosmetics, aromatherapy and professional production.</p>
+            <div class="product__keys"><span class="product__keys-label">Key items</span><ul><li>Lavender</li><li>Rose Damascena</li><li>Clary Sage</li></ul></div>
+          </div>
+          <button class="btn btn--block" type="button" data-dialog="cat-essential-oils">View full range</button>
         </li>
         <li class="product reveal d1">
-          <div class="product__media"><span class="badge">Perfumery</span><img src="images/p-absolutes.jpg" alt="Damask rose bloom" loading="lazy"></div>
-          <h3 class="product__name">Absolutes</h3>
-          <p class="eyebrow product__kind">From concretes</p>
-          <p class="product__docs">Samples · CoA · SDS</p>
-          <a class="btn btn--block" href="#quote" data-interest="Absolutes">Request price</a>
+          <div class="product__media" data-dialog="cat-carrier-oils"><img src="images/p-base-oils.jpg" alt="Cold-press oil expellers with golden plant oil flowing into a tank" loading="lazy"></div>
+          <div class="product__info">
+            <span class="product__num">02</span>
+            <h3 class="product__name">Cold-Pressed Base &amp; Carrier Oils</h3>
+            <p class="eyebrow product__kind">Organic / BIO available</p>
+            <p class="product__desc">Cold-pressed plant oils for cosmetic production, skin and hair care.</p>
+            <div class="product__keys"><span class="product__keys-label">Key items</span><ul><li>Sweet Almond</li><li>Rosehip Seed</li><li>Black Cumin</li></ul></div>
+          </div>
+          <button class="btn btn--block" type="button" data-dialog="cat-carrier-oils">View full range</button>
         </li>
         <li class="product reveal d2">
-          <div class="product__media"><img src="images/p-co2.jpg" alt="Pink peppercorns and coriander seeds" loading="lazy"></div>
-          <h3 class="product__name">CO<span class="sub">2</span> Extracts</h3>
-          <p class="eyebrow product__kind">Supercritical CO₂</p>
-          <p class="product__docs">Samples · CoA · SDS</p>
-          <a class="btn btn--block" href="#quote" data-interest="CO₂ Extracts">Request price</a>
+          <div class="product__media" data-dialog="cat-hydrolates"><span class="badge badge--olive">30+ BIO</span><img src="images/p-hydrolates.jpg" alt="Florentine separators and IBC containers of hydrolate" loading="lazy"></div>
+          <div class="product__info">
+            <span class="product__num">03</span>
+            <h3 class="product__name">Floral Waters &amp; Hydrolates</h3>
+            <p class="eyebrow product__kind">Supplied from 500 L</p>
+            <p class="product__desc">Floral and plant waters from the distillation of aromatic plants.</p>
+            <div class="product__keys"><span class="product__keys-label">Key items</span><ul><li>Rose Damascena</li><li>Lavender</li><li>Helichrysum</li></ul></div>
+          </div>
+          <button class="btn btn--block" type="button" data-dialog="cat-hydrolates">View full range</button>
         </li>
         <li class="product reveal d3">
-          <div class="product__media"><img src="images/p-concretes.jpg" alt="Floral concrete with jasmine flowers" loading="lazy"></div>
-          <h3 class="product__name">Concretes</h3>
-          <p class="eyebrow product__kind">Fresh flower extraction</p>
-          <p class="product__docs">Samples · CoA · SDS</p>
-          <a class="btn btn--block" href="#quote" data-interest="Concretes">Request price</a>
+          <div class="product__media" data-dialog="cat-concretes-absolutes"><img src="images/p-concretes.jpg" alt="Workers loading fresh jasmine flowers into an industrial extractor" loading="lazy"></div>
+          <div class="product__info">
+            <span class="product__num">04</span>
+            <h3 class="product__name">Concretes &amp; Absolutes</h3>
+            <p class="eyebrow product__kind">Floral, woody &amp; resinous</p>
+            <p class="product__desc">Concentrated aromatic materials for perfumery and fragrance composition.</p>
+            <div class="product__keys"><span class="product__keys-label">Includes</span><ul><li>Floral</li><li>Woody</li><li>Resinous</li></ul></div>
+          </div>
+          <button class="btn btn--block" type="button" data-dialog="cat-concretes-absolutes">View full range</button>
         </li>
         <li class="product reveal">
-          <div class="product__media"><span class="badge badge--olive">Cosmetics</span><img src="images/p-hydrolates.jpg" alt="Clary sage leaf with water droplets" loading="lazy"></div>
-          <h3 class="product__name">Hydrolates</h3>
-          <p class="eyebrow product__kind">Aromatic waters</p>
-          <p class="product__docs">Samples · CoA · SDS</p>
-          <a class="btn btn--block" href="#quote" data-interest="Hydrolates">Request price</a>
+          <div class="product__media" data-dialog="cat-macerates"><img src="images/p-macerates.jpg" alt="Stainless steel maceration tanks with calendula flowers in plant oil" loading="lazy"></div>
+          <div class="product__info">
+            <span class="product__num">05</span>
+            <h3 class="product__name">Oil Extracts / Macerates</h3>
+            <p class="eyebrow product__kind">Production to order</p>
+            <p class="product__desc">Plant material macerated in oil for cosmetic and care formulas.</p>
+            <div class="product__keys"><span class="product__keys-label">Includes</span><ul><li>Medicinal plants</li><li>Flowers</li><li>Herbs</li></ul></div>
+          </div>
+          <button class="btn btn--block" type="button" data-dialog="cat-macerates">View full range</button>
         </li>
         <li class="product reveal d1">
-          <div class="product__media"><img src="images/p-waxes.jpg" alt="Flakes of natural floral wax" loading="lazy"></div>
-          <h3 class="product__name">Plant Waxes</h3>
-          <p class="eyebrow product__kind">Floral &amp; plant waxes</p>
-          <p class="product__docs">Samples · CoA · SDS</p>
-          <a class="btn btn--block" href="#quote" data-interest="Plant Waxes">Request price</a>
+          <div class="product__media" data-dialog="cat-pg-extracts"><img src="images/p-pg-extracts.jpg" alt="Plant extract production line filling canisters" loading="lazy"></div>
+          <div class="product__info">
+            <span class="product__num">06</span>
+            <h3 class="product__name">Propylene Glycol Extracts</h3>
+            <p class="eyebrow product__kind">Matched to your requirements</p>
+            <p class="product__desc">Plant extracts on a propylene glycol base for cosmetic formulations.</p>
+            <div class="product__keys"><span class="product__keys-label">Includes</span><ul><li>Medicinal plants</li><li>Herbs</li><li>Flowers</li></ul></div>
+          </div>
+          <button class="btn btn--block" type="button" data-dialog="cat-pg-extracts">View full range</button>
         </li>
         <li class="product reveal d2">
-          <div class="product__media"><span class="badge badge--terra">Made to order</span><img src="images/p-custom.jpg" alt="Dried immortelle flowers" loading="lazy"></div>
-          <h3 class="product__name">Custom Production</h3>
-          <p class="eyebrow product__kind">To your technical brief</p>
-          <p class="product__docs">Your volume · Your specification</p>
+          <div class="product__media" data-dialog="cat-co2-extracts"><span class="badge badge--saffron">≈ 100 items</span><img src="images/p-co2.jpg" alt="High-pressure supercritical CO2 extraction vessels" loading="lazy"></div>
+          <div class="product__info">
+            <span class="product__num">07</span>
+            <h3 class="product__name">CO<span class="sub">2</span> Extracts</h3>
+            <p class="eyebrow product__kind">Supercritical CO<span class="sub">2</span> extraction</p>
+            <p class="product__desc">Concentrated plant extracts from low-temperature supercritical CO₂ extraction.</p>
+            <div class="product__keys"><span class="product__keys-label">Key items</span><ul><li>Rose Damascena</li><li>Jasmine</li><li>Frankincense</li></ul></div>
+          </div>
+          <button class="btn btn--block" type="button" data-dialog="cat-co2-extracts">View full range</button>
+        </li>
+        <li class="product reveal d3">
+          <div class="product__media" data-dialog="cat-butters"><img src="images/p-butters.jpg" alt="Blocks of natural plant butter on pallets in a warehouse" loading="lazy"></div>
+          <div class="product__info">
+            <span class="product__num">08</span>
+            <h3 class="product__name">Butters / Plant-Based Butters</h3>
+            <p class="eyebrow product__kind">Range on request</p>
+            <p class="product__desc">Natural plant butters for cosmetic and care formulations.</p>
+            <div class="product__keys"><span class="product__keys-label">Includes</span><ul><li>Range and grades on request</li></ul></div>
+          </div>
+          <button class="btn btn--block" type="button" data-dialog="cat-butters">View full range</button>
+        </li>
+        <li class="product reveal">
+          <div class="product__media" data-dialog="cat-herbs"><img src="images/p-herbs.jpg" alt="Herb drying belts and sacks of herbal powder in a processing facility" loading="lazy"></div>
+          <div class="product__info">
+            <span class="product__num">09</span>
+            <h3 class="product__name">Herbs &amp; Herbal Powders</h3>
+            <p class="eyebrow product__kind">Whole, cut or milled</p>
+            <p class="product__desc">Dried aromatic and medicinal plants for distillation and extraction.</p>
+            <div class="product__keys"><span class="product__keys-label">Includes</span><ul><li>Whole</li><li>Cut</li><li>Milled</li></ul></div>
+          </div>
+          <button class="btn btn--block" type="button" data-dialog="cat-herbs">View full range</button>
+        </li>
+        <li class="product reveal d1">
+          <div class="product__media" data-dialog="cat-waxes"><img src="images/p-waxes.jpg" alt="Cooling trays of natural wax with sacks on pallets" loading="lazy"></div>
+          <div class="product__info">
+            <span class="product__num">10</span>
+            <h3 class="product__name">Natural Waxes</h3>
+            <p class="eyebrow product__kind">Beeswax / Cera Alba &amp; more</p>
+            <p class="product__desc">Natural waxes for cosmetics, care products and formulations.</p>
+            <div class="product__keys"><span class="product__keys-label">Key items</span><ul><li>Beeswax / Cera Alba</li><li>More on request</li></ul></div>
+          </div>
+          <button class="btn btn--block" type="button" data-dialog="cat-waxes">View full range</button>
+        </li>
+        <li class="product reveal d2">
+          <div class="product__media"><span class="badge badge--terra">Made to order</span><img src="images/p-custom.jpg" alt="Large-scale Damask rose harvest with sacks loaded onto a truck" loading="lazy"></div>
+          <div class="product__info">
+            <span class="product__num">Bespoke</span>
+            <h3 class="product__name">Custom Production</h3>
+            <p class="eyebrow product__kind">To your technical brief</p>
+            <p class="product__desc">Production and sourcing to your exact specification and volumes.</p>
+          </div>
           <a class="btn btn--block btn--ink" href="#custom">How it works</a>
         </li>
         <li class="product product--cta reveal d3">
@@ -606,6 +812,47 @@ a.contact-pill:active { transform: scale(.98); }
           <a class="btn btn--block btn--ink" href="#quote" data-interest="Custom production & sourcing">Ask our team <svg><use href="#i-arrow"/></svg></a>
         </li>
       </ul>
+
+    </div>
+  </section>
+
+  <!-- Delivery formats -->
+  <section class="section section--tight-top" id="delivery" aria-labelledby="delivery-title">
+    <div class="wrap">
+      <div class="supply reveal">
+        <div class="supply__text">
+          <p class="eyebrow">B2B supply</p>
+          <h2 class="supply__title" id="delivery-title">Delivery <em>formats.</em></h2>
+          <p>Depending on the product, the following professional quantities are available.</p>
+        </div>
+        <div class="supply__grid">
+          <ul class="supply__sizes" aria-label="Available quantities">
+            <li><b>1</b>kg</li>
+            <li><b>5</b>kg</li>
+            <li><b>10</b>kg</li>
+            <li><b>25+</b>kg and above</li>
+          </ul>
+          <div class="supply__size--wide"><span class="supply__wide-label">Hydrolates / floral waters</span><b>from 500</b>litres</div>
+        </div>
+        <p class="supply__note"><strong>Wholesale and manufacturing quantities:</strong> delivery terms are calculated on a case-by-case basis.</p>
+        <div class="wholesale">
+          <div class="wholesale__text">
+            <h3 class="wholesale__title">Wholesale <em>enquiries.</em></h3>
+            <p>Contact us to receive information on:</p>
+            <ul class="wholesale__list">
+              <li>Availability</li>
+              <li>Available quantities</li>
+              <li>Delivery times</li>
+              <li>Current price</li>
+              <li>Product documentation</li>
+            </ul>
+          </div>
+          <div class="wholesale__actions">
+            <a class="wholesale__email" href="mailto:emilia.a@botanicalextracts.pro?subject=Wholesale%20enquiry"><svg><use href="#i-mail"/></svg><span><small>Email</small>emilia.a@botanicalextracts.pro</span></a>
+            <a class="btn btn--white" href="#quote" data-interest="Wholesale quotation">Request a quotation <svg><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -613,7 +860,7 @@ a.contact-pill:active { transform: scale(.98); }
   <section class="section" id="custom" aria-labelledby="custom-title">
     <div class="wrap split">
       <div class="split__media reveal-img">
-        <img src="images/s-custom.jpg" alt="Perfumer holding a vial of golden essential oil in sunlight" loading="lazy">
+        <img src="images/s-lab.jpg" alt="Technician loading samples into a GC-MS in the quality control laboratory" loading="lazy">
         <div class="floating-tag"><b>FR·BG</b>Producer network</div>
       </div>
       <div class="split__body reveal d1">
@@ -678,7 +925,7 @@ a.contact-pill:active { transform: scale(.98); }
         </ul>
       </div>
       <div class="split__media reveal-img">
-        <img src="images/s-harvest.jpg" alt="Harvesting immortelle flowers into a basket" loading="lazy">
+        <img src="images/s-harvest.jpg" alt="Mechanised harvest of lavender and clary sage" loading="lazy">
         <div class="floating-tag"><b>12</b>Years at the source</div>
       </div>
     </div>
@@ -690,9 +937,49 @@ a.contact-pill:active { transform: scale(.98); }
       <ul class="stats">
         <li class="stat reveal"><span class="stat__num" data-count="12">12</span><span class="stat__label">Years of experience</span><span class="stat__note">In natural aromatic ingredients</span></li>
         <li class="stat reveal d1"><span class="stat__num" data-count="2">2</span><span class="stat__label">Countries of production</span><span class="stat__note">France &amp; Bulgaria</span></li>
-        <li class="stat reveal d2"><span class="stat__num" data-count="6">6</span><span class="stat__label">Ingredient families</span><span class="stat__note">From essential oils to waxes</span></li>
+        <li class="stat reveal d2"><span class="stat__num" data-count="10">10</span><span class="stat__label">Product categories</span><span class="stat__note">From essential oils to waxes</span></li>
         <li class="stat reveal d3"><span class="stat__num"><span data-count="100">100</span><em>%</em></span><span class="stat__label">Batch traceability</span><span class="stat__note">Documented from field to delivery</span></li>
       </ul>
+    </div>
+  </section>
+
+  <!-- Certification -->
+  <section class="section" id="certification" aria-labelledby="cert-title">
+    <div class="wrap">
+      <div class="head head--center">
+        <p class="eyebrow reveal">Certification</p>
+        <h2 class="title reveal d1" id="cert-title">Certification and compliance with <em>international standards.</em></h2>
+        <p class="lede reveal d2">The quality, origin and safety of our products are confirmed by international certificates and a controlled production system.</p>
+      </div>
+      <ul class="certs">
+        <li class="cert reveal">
+          <span class="cert__emblem" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"><path d="M5 2h10l4 4v16H5z"/><path d="M15 2v4h4M8.5 13.5l2.5 2.5 4.5-5"/></svg></span>
+          <p class="eyebrow cert__code">EU · Export</p>
+          <h3>Certificate of Free Sale</h3>
+          <p>Confirms our products are legally produced and freely marketed, for export registration.</p>
+        </li>
+        <li class="cert reveal d1">
+          <span class="cert__emblem" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"><path d="M4 20L5 7l14-4-3 15z"/><path d="M4 20l9-9"/></svg></span>
+          <p class="eyebrow cert__code">CERES GmbH · BG‑BIO‑04</p>
+          <h3>Organic Certification</h3>
+          <p>EU organic certification of our production by the accredited control body CERES.</p>
+        </li>
+        <li class="cert reveal d2">
+          <span class="cert__emblem" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"><path d="M12 2l8 3v6c0 5.5-3.5 9.5-8 11-4.5-1.5-8-5.5-8-11V5z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
+          <p class="eyebrow cert__code">Quality management</p>
+          <h3>ISO 9001:2015</h3>
+          <p>A certified quality management system across production, control and supply.</p>
+        </li>
+        <li class="cert reveal d3">
+          <span class="cert__emblem" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"><path d="M12 2l2.6 6.4L21 9l-5 4.6L17.4 21 12 17.6 6.6 21 8 13.6 3 9l6.4-.6z"/></svg></span>
+          <p class="eyebrow cert__code">USDA · USA</p>
+          <h3>NOP — National Organic Program</h3>
+          <p>Compliance with US organic standards for supply to the American market.</p>
+        </li>
+      </ul>
+      <div class="certs-cta reveal">
+        <a class="btn" href="#quote" data-interest="Certificates & documentation">Request Certificates &amp; Documentation <svg><use href="#i-arrow"/></svg></a>
+      </div>
     </div>
   </section>
 
@@ -716,7 +1003,7 @@ a.contact-pill:active { transform: scale(.98); }
   <section class="section" id="approach" aria-labelledby="approach-title">
     <div class="wrap split split--rev">
       <div class="split__media reveal-img">
-        <img src="images/s-field.jpg" alt="Clary sage and lavender fields in Provence" loading="lazy">
+        <img src="images/s-plantation.jpg" alt="Aerial view of rose and lavender plantations with the production site" loading="lazy">
       </div>
       <div class="split__body reveal d1">
         <p class="eyebrow">Our approach</p>
@@ -782,7 +1069,7 @@ a.contact-pill:active { transform: scale(.98); }
     <div class="wrap">
       <div class="quote reveal">
         <aside class="quote__aside">
-          <img src="images/s-samples.jpg" alt="Amber sample vials with rose petals and lavender" loading="lazy">
+          <img src="images/s-warehouse.jpg" alt="Export warehouse with drums and IBC containers ready for shipping" loading="lazy">
           <h2 class="title" id="quote-title">Request a <em>quote.</em></h2>
           <p>Tell us what you need. We reply directly with availability, documentation and a sample proposal.</p>
           <div class="contact-list">
@@ -837,19 +1124,25 @@ a.contact-pill:active { transform: scale(.98); }
         <div>
           <h3>Products</h3>
           <ul>
-            <li><a href="#products">Essential Oils</a></li>
-            <li><a href="#products">Absolutes</a></li>
-            <li><a href="#products">CO₂ Extracts</a></li>
-            <li><a href="#products">Concretes</a></li>
-            <li><a href="#products">Hydrolates</a></li>
-            <li><a href="#products">Plant Waxes</a></li>
+            <li><a href="#products" data-dialog="cat-essential-oils">Essential Oils</a></li>
+            <li><a href="#products" data-dialog="cat-carrier-oils">Carrier Oils</a></li>
+            <li><a href="#products" data-dialog="cat-hydrolates">Hydrolates</a></li>
+            <li><a href="#products" data-dialog="cat-concretes-absolutes">Concretes &amp; Absolutes</a></li>
+            <li><a href="#products" data-dialog="cat-macerates">Macerates</a></li>
+            <li><a href="#products" data-dialog="cat-pg-extracts">PG Extracts</a></li>
+            <li><a href="#products" data-dialog="cat-co2-extracts">CO₂ Extracts</a></li>
+            <li><a href="#products" data-dialog="cat-butters">Butters</a></li>
+            <li><a href="#products" data-dialog="cat-herbs">Herbs &amp; Powders</a></li>
+            <li><a href="#products" data-dialog="cat-waxes">Natural Waxes</a></li>
           </ul>
         </div>
         <div>
           <h3>Company</h3>
           <ul>
+            <li><a href="#delivery">Delivery formats</a></li>
             <li><a href="#custom">Custom production</a></li>
             <li><a href="#why">Why us</a></li>
+            <li><a href="#certification">Certification</a></li>
             <li><a href="#process">How it works</a></li>
             <li><a href="#approach">Our approach</a></li>
             <li><a href="#faq">FAQ</a></li>
@@ -873,6 +1166,141 @@ a.contact-pill:active { transform: scale(.98); }
     </div>
   </footer>
 </div>
+
+<!-- Catalogue category panels -->
+<dialog class="cat-dialog" id="cat-essential-oils" aria-labelledby="cat-essential-oils-title">
+  <div class="cat-dialog__inner">
+    <button class="cat-dialog__close" type="button" data-close aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
+    <p class="eyebrow cat-dialog__num">01 · Product catalogue</p>
+    <h3 class="title cat-dialog__title" id="cat-essential-oils-title">Natural Essential Oils</h3>
+    <p class="lede">A wide range of natural essential oils for perfumery, cosmetics, aromatherapy and professional production. Conventional and Organic / BIO grades are available.</p>
+    <p class="cat-dialog__stat">60+ BIO essential oils</p>
+    <p class="eyebrow cat-dialog__label">Key items</p>
+        <ul class="cat-list" id="cat-essential-oils-list"><li><b>Lavender</b><i>Lavandula angustifolia</i></li><li><b>Lavandin</b><i>Lavandula × hybrida</i></li><li><b>Rose Damascena</b><i>Rosa damascena</i></li><li><b>Rose Alba</b><i>Rosa alba</i></li><li><b>Clary Sage</b><i>Salvia sclarea</i></li><li><b>Melissa / Lemon Balm</b><i>Melissa officinalis</i></li><li class="is-extra"><b>Helichrysum / Immortelle</b><i>Helichrysum italicum</i></li><li class="is-extra"><b>German Chamomile</b><i>Matricaria chamomilla</i></li><li class="is-extra"><b>Roman Chamomile</b><i>Chamaemelum nobile</i></li><li class="is-extra"><b>Peppermint</b><i>Mentha piperita</i></li><li class="is-extra"><b>Geranium</b><i>Pelargonium graveolens</i></li><li class="is-extra"><b>Rosemary</b><i>Rosmarinus officinalis</i></li><li class="is-extra"><b>Thyme</b><i>Thymus vulgaris</i></li><li class="is-extra"><b>Oregano</b><i>Origanum vulgare</i></li><li class="is-extra"><b>Juniper</b><i>Juniperus communis</i></li><li class="is-extra"><b>Atlas Cedarwood</b><i>Cedrus atlantica</i></li></ul>
+    <button class="btn btn--line cat-toggle" type="button" aria-expanded="false" aria-controls="cat-essential-oils-list" data-more="Show all 16 items" data-less="Show key items only">Show all 16 items</button>
+    <div class="cat-dialog__notes"><p>Also in our range: Hyssop, Blue Tansy, Pine, Fir and other essential oils.</p></div>
+    <div class="cat-dialog__actions"><a class="btn" href="#quote" data-interest="Natural essential oils">Request price &amp; availability</a><a class="btn btn--line" href="#quote" data-interest="Natural essential oils">Request the full range</a></div>
+  </div>
+</dialog>
+<dialog class="cat-dialog" id="cat-carrier-oils" aria-labelledby="cat-carrier-oils-title">
+  <div class="cat-dialog__inner">
+    <button class="cat-dialog__close" type="button" data-close aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
+    <p class="eyebrow cat-dialog__num">02 · Product catalogue</p>
+    <h3 class="title cat-dialog__title" id="cat-carrier-oils-title">Cold-Pressed Base &amp; Carrier Oils</h3>
+    <p class="lede">Natural cold-pressed plant oils for cosmetic production, skin and hair care and other professional applications.</p>
+    
+    <p class="eyebrow cat-dialog__label">Key items</p>
+        <ul class="cat-list" id="cat-carrier-oils-list"><li><b>Sweet Almond Oil</b><i>Prunus dulcis</i></li><li><b>Apricot Kernel Oil</b><i>Prunus armeniaca</i></li><li><b>Black Cumin Oil</b><i>Nigella sativa</i></li><li><b>Pomegranate Seed Oil</b><i>Punica granatum</i></li><li><b>Rosehip Seed Oil</b><i>Rosa canina</i></li><li><b>Evening Primrose Oil</b><i>Oenothera biennis</i></li><li class="is-extra"><b>Marula Oil</b><i>Sclerocarya birrea</i></li><li class="is-extra"><b>Sesame Oil</b><i>Sesamum indicum</i></li><li class="is-extra"><b>Rice Bran Oil</b><i>Oryza sativa</i></li><li class="is-extra"><b>Sunflower Oil</b><i>Helianthus annuus</i></li><li class="is-extra"><b>Olive Oil</b><i>Olea europaea</i></li></ul>
+    <button class="btn btn--line cat-toggle" type="button" aria-expanded="false" aria-controls="cat-carrier-oils-list" data-more="Show all 11 items" data-less="Show key items only">Show all 11 items</button>
+    <div class="cat-dialog__notes"><p>Speciality plant oils and butters are also available.</p><p>Organic / BIO grades available.</p></div>
+    <div class="cat-dialog__actions"><a class="btn" href="#quote" data-interest="Cold-pressed base and carrier oils">Request price &amp; availability</a><a class="btn btn--line" href="#quote" data-interest="Cold-pressed base and carrier oils">Request the full range</a></div>
+  </div>
+</dialog>
+<dialog class="cat-dialog" id="cat-hydrolates" aria-labelledby="cat-hydrolates-title">
+  <div class="cat-dialog__inner">
+    <button class="cat-dialog__close" type="button" data-close aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
+    <p class="eyebrow cat-dialog__num">03 · Product catalogue</p>
+    <h3 class="title cat-dialog__title" id="cat-hydrolates-title">Floral Waters &amp; Hydrolates</h3>
+    <p class="lede">Natural floral and plant waters obtained during the distillation of aromatic and medicinal plants.</p>
+    <p class="cat-dialog__stat">30+ BIO hydrolates</p>
+    <p class="eyebrow cat-dialog__label">Key items</p>
+        <ul class="cat-list" id="cat-hydrolates-list"><li><b>Rose Damascena</b><i>Rosa damascena</i></li><li><b>Rose Alba</b><i>Rosa alba</i></li><li><b>Lavender</b><i>Lavandula angustifolia</i></li><li><b>Helichrysum / Immortelle</b><i>Helichrysum italicum</i></li><li><b>Melissa</b><i>Melissa officinalis</i></li><li><b>German Chamomile</b><i>Matricaria recutita</i></li><li class="is-extra"><b>Roman Chamomile</b><i>Chamaemelum nobile</i></li><li class="is-extra"><b>Clary Sage</b><i>Salvia sclarea</i></li><li class="is-extra"><b>Peppermint</b><i>Mentha piperita</i></li><li class="is-extra"><b>Rosemary</b><i>Rosmarinus officinalis</i></li><li class="is-extra"><b>Calendula</b><i>Calendula officinalis</i></li><li class="is-extra"><b>Juniper Berry</b><i>Juniperus communis</i></li><li class="is-extra"><b>Rosehip</b><i>Rosa canina</i></li><li class="is-extra"><b>Geranium Rosat</b><i>Pelargonium graveolens</i></li></ul>
+    <button class="btn btn--line cat-toggle" type="button" aria-expanded="false" aria-controls="cat-hydrolates-list" data-more="Show all 14 items" data-less="Show key items only">Show all 14 items</button>
+    <div class="cat-dialog__notes"><p>Also available: basil, yarrow, nettle, fennel, oregano, thyme, St John’s wort, wormwood and other hydrolates.</p></div>
+    <div class="cat-dialog__actions"><a class="btn" href="#quote" data-interest="Floral waters and hydrolates">Request price &amp; availability</a><a class="btn btn--line" href="#quote" data-interest="Floral waters and hydrolates">Request the full range</a></div>
+  </div>
+</dialog>
+<dialog class="cat-dialog" id="cat-concretes-absolutes" aria-labelledby="cat-concretes-absolutes-title">
+  <div class="cat-dialog__inner">
+    <button class="cat-dialog__close" type="button" data-close aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
+    <p class="eyebrow cat-dialog__num">04 · Product catalogue</p>
+    <h3 class="title cat-dialog__title" id="cat-concretes-absolutes-title">Concretes &amp; Absolutes</h3>
+    <p class="lede">Highly concentrated natural aromatic materials for perfumery, cosmetics and fragrance composition. The range includes floral, plant, woody, resinous and other natural extracts.</p>
+    
+    
+    <div class="cat-dialog__notes"><p>Availability depends on the specific product, the season and the order volume.</p><p>We can also source special and rare materials through our network of producers in France and Bulgaria.</p></div>
+    <div class="cat-dialog__actions"><a class="btn" href="#quote" data-interest="Concretes and absolutes">Request the full range</a><a class="btn btn--line" href="#quote" data-interest="Concretes and absolutes">Find a specific product</a></div>
+  </div>
+</dialog>
+<dialog class="cat-dialog" id="cat-macerates" aria-labelledby="cat-macerates-title">
+  <div class="cat-dialog__inner">
+    <button class="cat-dialog__close" type="button" data-close aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
+    <p class="eyebrow cat-dialog__num">05 · Product catalogue</p>
+    <h3 class="title cat-dialog__title" id="cat-macerates-title">Oil Extracts / Macerates</h3>
+    <p class="lede">Natural plant extracts obtained by macerating plant material in oil, used in cosmetic formulas, care products and other natural products.</p>
+    
+    
+    <div class="cat-dialog__notes"><p>Extracts of various medicinal plants, flowers and herbs are available.</p><p>Selected items can be produced to order.</p></div>
+    <div class="cat-dialog__actions"><a class="btn" href="#quote" data-interest="Oil extracts / macerates">Request the range</a><a class="btn btn--line" href="#quote" data-interest="Oil extracts / macerates">Request production</a></div>
+  </div>
+</dialog>
+<dialog class="cat-dialog" id="cat-pg-extracts" aria-labelledby="cat-pg-extracts-title">
+  <div class="cat-dialog__inner">
+    <button class="cat-dialog__close" type="button" data-close aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
+    <p class="eyebrow cat-dialog__num">06 · Product catalogue</p>
+    <h3 class="title cat-dialog__title" id="cat-pg-extracts-title">Propylene Glycol Extracts</h3>
+    <p class="lede">Plant extracts on a propylene glycol base for the cosmetic industry and professional formulations, with a wide choice of medicinal plants, herbs, flowers and other botanicals.</p>
+    
+    
+    <div class="cat-dialog__notes"><p>We can select and produce an extract to match your requirements.</p></div>
+    <div class="cat-dialog__actions"><a class="btn" href="#quote" data-interest="Propylene glycol extracts">Request the range</a><a class="btn btn--line" href="#quote" data-interest="Propylene glycol extracts">Request a product</a></div>
+  </div>
+</dialog>
+<dialog class="cat-dialog" id="cat-co2-extracts" aria-labelledby="cat-co2-extracts-title">
+  <div class="cat-dialog__inner">
+    <button class="cat-dialog__close" type="button" data-close aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
+    <p class="eyebrow cat-dialog__num">07 · Product catalogue</p>
+    <h3 class="title cat-dialog__title" id="cat-co2-extracts-title">CO<span class="sub">2</span> Extracts</h3>
+    <p class="lede">Highly concentrated natural plant extracts obtained by supercritical CO₂ extraction at low temperatures. The technology gently extracts the lipophilic and aromatic components of the plant material.</p>
+    <p class="cat-dialog__stat">About 100 CO₂ extracts</p>
+    <p class="eyebrow cat-dialog__label">Key items</p>
+        <ul class="cat-list" id="cat-co2-extracts-list"><li><b>Rose Damascena</b><i>Rosa damascena</i></li><li><b>Rose Centifolia</b><i>Rosa centifolia</i></li><li><b>Jasmine</b><i>Jasminum grandiflorum</i></li><li><b>Lavender</b><i>Lavandula angustifolia</i></li><li><b>Clary Sage</b><i>Salvia sclarea</i></li><li><b>Frankincense</b><i>Boswellia carterii</i></li><li class="is-extra"><b>Oak Moss</b><i>Evernia prunastri</i></li><li class="is-extra"><b>Tobacco</b><i>Nicotiana tabacum</i></li><li class="is-extra"><b>Vetiver</b><i>Vetiveria zizanioides</i></li><li class="is-extra"><b>Cardamom</b><i>Elettaria cardamomum</i></li><li class="is-extra"><b>Ginger</b><i>Zingiber officinale</i></li><li class="is-extra"><b>Black Pepper</b><i>Piper nigrum</i></li><li class="is-extra"><b>Cocoa</b><i>Theobroma cacao</i></li><li class="is-extra"><b>Coffee</b><i>Coffea arabica</i></li><li class="is-extra"><b>Green Tea</b><i>Camellia sinensis</i></li><li class="is-extra"><b>Rosemary</b><i>Rosmarinus officinalis</i></li><li class="is-extra"><b>Peppermint</b><i>Mentha piperita</i></li><li class="is-extra"><b>German Chamomile</b><i>Matricaria chamomilla</i></li><li class="is-extra"><b>Calendula</b><i>Calendula officinalis</i></li><li class="is-extra"><b>Centella</b><i>Centella asiatica</i></li><li class="is-extra"><b>Sea Buckthorn</b><i>Hippophae rhamnoides</i></li><li class="is-extra"><b>Rosehip</b><i>Rosa canina</i></li><li class="is-extra"><b>Black Cumin</b><i>Nigella sativa</i></li><li class="is-extra"><b>Pomegranate Seed</b><i>Punica granatum</i></li><li class="is-extra"><b>Carrot Seed</b><i>Daucus carota</i></li></ul>
+    <button class="btn btn--line cat-toggle" type="button" aria-expanded="false" aria-controls="cat-co2-extracts-list" data-more="Show all 25 items" data-less="Show key items only">Show all 25 items</button>
+    <div class="cat-more">
+      <p class="cat-more__title">And over 70 more items</p>
+      <p>The full range comprises around 100 CO₂ extracts of medicinal plants, flowers, herbs, spices, seeds, fruits and other plant material, including Helichrysum, Acacia, Coriander, Turmeric, Melissa, Juniper Berry, Hops, Aloe Vera, Arnica, Elderberry, Anise, Yarrow, White Rose, Evening Primrose, Hawthorn, Linden, Lilac, Nettle and Mursal Tea.</p>
+    </div>
+    <div class="cat-dialog__notes"><p>Part of the range is in stock. Availability of individual items and production to order are confirmed individually.</p></div>
+    <div class="cat-dialog__actions"><a class="btn" href="#quote" data-interest="CO₂ extracts: full catalogue">Request the full catalogue of CO₂ extracts</a><a class="btn btn--line" href="#quote" data-interest="CO₂ extracts: price and availability">Request price and availability</a></div>
+  </div>
+</dialog>
+<dialog class="cat-dialog" id="cat-butters" aria-labelledby="cat-butters-title">
+  <div class="cat-dialog__inner">
+    <button class="cat-dialog__close" type="button" data-close aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
+    <p class="eyebrow cat-dialog__num">08 · Product catalogue</p>
+    <h3 class="title cat-dialog__title" id="cat-butters-title">Butters / Plant-Based Butters</h3>
+    <p class="lede">Natural plant butters for cosmetic production, skin and hair care and professional formulations.</p>
+    
+    
+    <div class="cat-dialog__notes"><p>The current range, grades and available volumes are confirmed on request.</p></div>
+    <div class="cat-dialog__actions"><a class="btn" href="#quote" data-interest="Butters / plant-based butters">Request the range</a><a class="btn btn--line" href="#quote" data-interest="Butters / plant-based butters">Request price &amp; availability</a></div>
+  </div>
+</dialog>
+<dialog class="cat-dialog" id="cat-herbs" aria-labelledby="cat-herbs-title">
+  <div class="cat-dialog__inner">
+    <button class="cat-dialog__close" type="button" data-close aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
+    <p class="eyebrow cat-dialog__num">09 · Product catalogue</p>
+    <h3 class="title cat-dialog__title" id="cat-herbs-title">Herbs &amp; Herbal Powders</h3>
+    <p class="lede">Natural dried plant material, whole, cut or milled. The range includes aromatic and medicinal plants grown by us and our partners.</p>
+    
+    
+    <div class="cat-dialog__notes"><p>We supply raw material for further distillation, extraction, cosmetic and other professional production.</p><p>The range and available volumes depend on the season and the harvest.</p></div>
+    <div class="cat-dialog__actions"><a class="btn" href="#quote" data-interest="Herbs and herbal powders">Request the current range</a><a class="btn btn--line" href="#quote" data-interest="Herbs and herbal powders">Request a wholesale supply</a></div>
+  </div>
+</dialog>
+<dialog class="cat-dialog" id="cat-waxes" aria-labelledby="cat-waxes-title">
+  <div class="cat-dialog__inner">
+    <button class="cat-dialog__close" type="button" data-close aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
+    <p class="eyebrow cat-dialog__num">10 · Product catalogue</p>
+    <h3 class="title cat-dialog__title" id="cat-waxes-title">Natural Waxes</h3>
+    <p class="lede">Natural waxes for the cosmetic industry, care products and professional formulations.</p>
+    
+    <p class="eyebrow cat-dialog__label">Key items</p>
+        <ul class="cat-list"><li><b>Beeswax</b><i>Cera Alba</i></li></ul>
+    <div class="cat-dialog__notes"><p>Further natural waxes are available on request through our network of producers and partners.</p></div>
+    <div class="cat-dialog__actions"><a class="btn" href="#quote" data-interest="Natural waxes">Request the range</a><a class="btn btn--line" href="#quote" data-interest="Natural waxes">Request price &amp; availability</a></div>
+  </div>
+</dialog>
 
 <a class="wa" href="https://wa.me/33658651354" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <b><svg><use href="#i-wa"/></svg></b><span class="wa__label">Chat with us</span>
@@ -997,6 +1425,39 @@ a.contact-pill:active { transform: scale(.98); }
     });
   }, { rootMargin: '-45% 0px -50% 0px' });
   $$('main section[id]').forEach((s) => spy.observe(s));
+
+  // Catalogue: each category opens a panel with its product range
+  $$('[data-dialog]').forEach((el) => el.addEventListener('click', () => {
+    const dlg = document.getElementById(el.dataset.dialog);
+    if (!dlg) return;
+    dlg.showModal();
+    document.body.classList.add('no-scroll');
+  }));
+  $$('.cat-dialog').forEach((dlg) => {
+    dlg.addEventListener('close', () => document.body.classList.remove('no-scroll'));
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+    $$('[data-close]', dlg).forEach((b) => b.addEventListener('click', () => dlg.close()));
+    // Request buttons: close the panel first, then scroll to the form (closing returns focus to the card)
+    $$('a[href^="#"]', dlg).forEach((a) => a.addEventListener('click', (e) => {
+      e.preventDefault();
+      dlg.close();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    }));
+  });
+
+  // Inside a panel: show key items first, the full list on request
+  $$('.cat-toggle').forEach((btn) => btn.addEventListener('click', () => {
+    const list = document.getElementById(btn.getAttribute('aria-controls'));
+    const open = list.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', String(open));
+    btn.textContent = open ? btn.dataset.less : btn.dataset.more;
+    if (!open) list.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }));
+  $$('.cat-dialog').forEach((dlg) => dlg.addEventListener('close', () => {
+    $$('.cat-list.is-open', dlg).forEach((l) => l.classList.remove('is-open'));
+    $$('.cat-toggle', dlg).forEach((b) => { b.setAttribute('aria-expanded', 'false'); b.textContent = b.dataset.more; });
+  }));
 
   // FAQ: only one answer open at a time
   const faqItems = $$('.faq details');
