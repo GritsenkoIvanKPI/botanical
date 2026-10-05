@@ -47,10 +47,10 @@
 @media (min-width: 80rem) { :root { --pad-x: 2.5rem; } }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 6rem; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; -webkit-text-size-adjust: 100%; overflow-x: hidden; overflow-x: clip; }
 body {
   margin: 0; background: #fff; color: var(--ink);
-  font: 400 1rem/1.7 var(--font-sans); -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  font: 400 1rem/1.7 var(--font-sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; overflow-x: clip; width: 100%;
 }
 body.no-scroll { overflow: hidden; }
 img { display: block; max-width: 100%; }
@@ -69,8 +69,11 @@ button { font: inherit; color: inherit; }
 /* ---------- Type ---------- */
 .display, .title { font-family: var(--font-serif); font-weight: 400; letter-spacing: -.03em; }
 .display { font-size: clamp(2.75rem, 7.4vw, 5.75rem); line-height: 1.02; }
-.title { font-size: clamp(2.125rem, 4.4vw, 3.5rem); line-height: 1.08; }
+.title { font-size: clamp(1.75rem, 8vw, 2.125rem); line-height: 1.08; }
+@media (min-width: 30rem) { .title { font-size: clamp(2.125rem, 4.4vw, 3.5rem); } }
 .display em, .title em { font-style: italic; }
+h1, h2, h3, p, li, a, span, summary, label { overflow-wrap: break-word; }
+.wrap > *, .head > *, .faq-grid > *, .features-grid > *, .split > *, .stats > *, .products > *, .certs > *, .steps > *, .supply > *, .quote > * { min-width: 0; }
 h1, h2, h3, .title, .display { text-wrap: balance; }
 .faq summary { text-wrap: pretty; }
 p, li, .lede { text-wrap: pretty; }
@@ -272,6 +275,7 @@ p, li, .lede { text-wrap: pretty; }
   .product__desc { margin: .5rem 0 0; font-size: .875rem; line-height: 1.5; }
   .product__keys { margin: .625rem 0 0; padding-top: .625rem; }
   .product__keys ul { justify-content: flex-start; font-size: .8125rem; }
+  .product__keys li { white-space: normal; }
   .product .btn { grid-column: 1 / -1; margin-top: 0; }
   .product--cta { display: flex; border-bottom: 0; }
   .product--cta .product__media { min-height: 0; gap: 1.5rem; margin-bottom: 1rem; }
@@ -418,13 +422,14 @@ p, li, .lede { text-wrap: pretty; }
 
 
 /* ---------- Stats ---------- */
-.stats { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-5) var(--sp-3); max-width: 72rem; margin: 0 auto; padding: var(--sp-4) 0; }
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-5) var(--sp-3); max-width: 72rem; margin: 0 auto; padding: var(--sp-4) 0; }
 @media (min-width: 64rem) { .stats { grid-template-columns: repeat(4, 1fr); } }
 .stat { text-align: center; }
 .stat__num { display: block; font: 400 clamp(2.25rem, 3.4vw, 3rem)/1 var(--font-serif); letter-spacing: -.02em; color: var(--ink); }
 .stat__num em { font-style: italic; }
 .stat__label { display: block; margin-top: .875rem; font-size: .9375rem; font-weight: 500; line-height: 1.4; }
 .stat__note { display: block; margin-top: .25rem; font: italic 400 1rem/1.4 var(--font-serif); color: var(--muted); }
+@media (max-width: 24rem) { .stats { gap: var(--sp-4) .75rem; } .stat__label { font-size: .8125rem; } .stat__note { font-size: .875rem; } }
 
 /* ---------- Certification ---------- */
 .certs { display: grid; gap: 1.25rem; }
@@ -531,10 +536,11 @@ a.contact-pill:active { transform: scale(.98); }
 .footer__ctas { display: flex; flex-wrap: wrap; gap: .75rem; }
 .footer__cols { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: var(--sp-4) var(--sp-3); }
 .footer__cols > div:first-child { grid-column: 1 / -1; }
-.footer__cols > div:first-child ul { display: grid; grid-auto-flow: column; grid-template-rows: repeat(5, auto); grid-auto-columns: max-content; gap: .375rem 2.5rem; }
+.footer__cols > div:first-child ul { display: grid; grid-auto-flow: column; grid-template-rows: repeat(5, auto); grid-template-columns: max-content minmax(0, 1fr); gap: .375rem 1.5rem; }
+@media (min-width: 64rem) { .footer__cols > div:first-child ul { grid-template-columns: none; grid-auto-columns: max-content; gap: .375rem 2.5rem; } }
 .footer__cols > div:first-child li + li { margin-top: 0; }
 @media (min-width: 64rem) { .footer__cols { grid-template-columns: max-content max-content minmax(0, 1fr); gap: var(--sp-4) 3rem; } .footer__cols > div:first-child { grid-column: auto; } }
-@media (max-width: 24rem) { .footer__cols > div:first-child ul { grid-auto-flow: row; grid-template-rows: none; } }
+@media (max-width: 24rem) { .footer__cols > div:first-child ul { grid-auto-flow: row; grid-template-rows: none; grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 22.5rem) { .footer { padding-left: 1.25rem; padding-right: 1.25rem; } .footer__cols { grid-template-columns: minmax(0, 1fr); } }
 .footer__top > * { min-width: 0; }
 .footer__cols h3 { font: 400 1.5rem/1.2 var(--font-serif); margin-bottom: 1rem; }
@@ -1329,6 +1335,8 @@ a.contact-pill:active { transform: scale(.98); }
     nodes.forEach((node) => { const re = /[^\s\u00A0]+/g; let m; while ((m = re.exec(node.data))) tokens.push({ node, a: m.index, z: m.index + m[0].length, word: WORD.test(m[0]) }); });
     const real = tokens.map((t, i) => t.word ? i : -1).filter((i) => i >= 0);
     if (real.length < 2) return;
+    const pairLength = tokens.slice(real[real.length - 2], real[real.length - 1] + 1).reduce((n, t) => n + (t.z - t.a) + 1, -1);
+    if (pairLength > (el.matches('h1, h2, .title') ? 14 : 24)) return;
     const from = real[real.length - 2], to = real[real.length - 1];
     // replace every breakable space between the second-to-last and last real word with a non-breaking one
     for (let i = to; i > from; i--) {
@@ -1342,7 +1350,7 @@ a.contact-pill:active { transform: scale(.98); }
       }
     }
   };
-  $$('p, h1:not([data-split]), h2, h3, li, summary, label, .btn, .chip, .cred, .stat__label, .stat__note, .eyebrow, .floating-tag, .contact-pill > span, .footer__bottom > span, .promo a > span')
+  $$('p, h1:not([data-split]), h2, h3, li:not(.footer__cols li), summary, label, .btn, .chip, .cred, .stat__label, .stat__note, .eyebrow, .floating-tag, .contact-pill > span, .footer__bottom > span, .promo a > span')
     .forEach(glueLastWords);
 
   // Hero headline: split into words for a staggered rise
