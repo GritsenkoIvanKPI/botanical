@@ -47,7 +47,7 @@
 @media (min-width: 80rem) { :root { --pad-x: 2.5rem; } }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 6rem; -webkit-text-size-adjust: 100%; overflow-x: hidden; overflow-x: clip; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; -webkit-text-size-adjust: 100%; overflow-x: hidden; overflow-x: clip; touch-action: pan-y; overscroll-behavior-x: none; }
 body {
   margin: 0; background: #fff; color: var(--ink);
   font: 400 1rem/1.7 var(--font-sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; overflow-x: clip; width: 100%;
@@ -510,7 +510,7 @@ a.contact-pill:active { transform: scale(.98); }
 .field--full { grid-column: 1 / -1; }
 .field label { font-size: .8125rem; font-weight: 700; }
 .field input, .field select, .field textarea {
-  width: 100%; padding: .875rem 1.125rem; font: 500 .9375rem/1.4 var(--font-sans); color: var(--ink);
+  width: 100%; padding: .875rem 1.125rem; font: 500 1rem/1.4 var(--font-sans); color: var(--ink);
   background: var(--blush); border: 1.5px solid transparent; appearance: none;
   transition: border-color .3s var(--ease), background-color .3s var(--ease);
 }
