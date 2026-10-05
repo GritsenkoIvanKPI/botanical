@@ -42,6 +42,8 @@ for (const [w,h] of sizes) {
     }
     // content spilling outside the viewport horizontally
     for (const el of leaf) { const r = el.getBoundingClientRect(); if ((r.right > innerWidth + 1 || r.left < -1) && !el.closest('.marquee')) out.offscreen.push(label(el) + ` [${Math.round(r.left)}..${Math.round(r.right)}]`); }
+    // text spilling out of its own box (e.g. a long unbreakable label running into the next column)
+    for (const el of leaf) { if (el.closest('.wordmark')) continue; const rg = document.createRange(); rg.selectNodeContents(el); const tr = rg.getBoundingClientRect(), r = el.getBoundingClientRect(); if (tr.width && (tr.right > r.right + 2 || tr.left < r.left - 2)) out.overlaps.push('text spills out of ' + label(el)); }
     // content under the fixed nav at page top (hero headline)
     const nav = document.querySelector('.nav').getBoundingClientRect(), h1 = document.querySelector('.hero .display').getBoundingClientRect();
     if (h1.top < nav.bottom) out.overlaps.push('hero headline under nav');

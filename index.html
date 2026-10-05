@@ -525,16 +525,16 @@ a.contact-pill:active { transform: scale(.98); }
 .footer { max-width: var(--wrap); margin: 0 auto; padding: var(--sp-5) var(--sp-3) var(--sp-4); background: var(--terra); color: #fff; overflow: hidden; }
 @media (min-width: 48rem) { .footer { padding: var(--sp-6) var(--sp-5) var(--sp-4); } }
 .footer__top { display: grid; gap: var(--sp-5); }
-@media (min-width: 80rem) { .footer__top { grid-template-columns: 1fr 1.25fr; } }
+@media (min-width: 80rem) { .footer__top { grid-template-columns: minmax(0, .8fr) minmax(0, 1.6fr); } }
 .footer__flower { width: 2.5rem; height: 2.5rem; margin-bottom: var(--sp-3); animation: spin 20s linear infinite; }
 .footer .title { font-size: clamp(2rem, 3.4vw, 2.75rem); margin-bottom: var(--sp-3); }
 .footer__ctas { display: flex; flex-wrap: wrap; gap: .75rem; }
-.footer__cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-4) var(--sp-3); }
+.footer__cols { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: var(--sp-4) var(--sp-3); }
 .footer__cols > div:first-child { grid-column: 1 / -1; }
-.footer__cols > div:first-child ul { columns: 2; column-gap: var(--sp-3); }
-.footer__cols > div:first-child li { break-inside: avoid; }
-@media (min-width: 48rem) { .footer__cols { grid-template-columns: minmax(0, 1.5fr) repeat(2, minmax(0, 1fr)); } .footer__cols > div:first-child { grid-column: auto; } }
-@media (max-width: 24rem) { .footer__cols > div:first-child ul { columns: 1; } }
+.footer__cols > div:first-child ul { display: grid; grid-auto-flow: column; grid-template-rows: repeat(5, auto); grid-auto-columns: max-content; gap: .375rem 2.5rem; }
+.footer__cols > div:first-child li + li { margin-top: 0; }
+@media (min-width: 64rem) { .footer__cols { grid-template-columns: max-content max-content minmax(0, 1fr); gap: var(--sp-4) 3rem; } .footer__cols > div:first-child { grid-column: auto; } }
+@media (max-width: 24rem) { .footer__cols > div:first-child ul { grid-auto-flow: row; grid-template-rows: none; } }
 @media (max-width: 22.5rem) { .footer { padding-left: 1.25rem; padding-right: 1.25rem; } .footer__cols { grid-template-columns: minmax(0, 1fr); } }
 .footer__top > * { min-width: 0; }
 .footer__cols h3 { font: 400 1.5rem/1.2 var(--font-serif); margin-bottom: 1rem; }
