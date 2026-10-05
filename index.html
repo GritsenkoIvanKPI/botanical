@@ -264,24 +264,21 @@ p, li, .lede { text-wrap: pretty; }
 .product--cta .flower { width: 3rem; height: 3rem; animation: spin 18s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* Phones: compact rows (photo beside the name, button underneath) */
+/* Phones: photo on top at full column width, text and button underneath */
 @media (max-width: 35.99rem) {
-  .product { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 1rem 1.125rem; align-items: center; text-align: left; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(23, 21, 15, .1); }
-  .product__media { aspect-ratio: 1; }
-  .product__media .badge { display: none; }
-  .product__info { padding: 0; min-width: 0; }
-  .product__name { font-size: 1.3125rem; margin-top: .375rem; }
-  .product__kind { margin-top: .375rem; }
-  .product__desc { margin: .5rem 0 0; font-size: .875rem; line-height: 1.5; }
-  .product__keys { margin: .625rem 0 0; padding-top: .625rem; }
-  .product__keys ul { justify-content: flex-start; font-size: .8125rem; }
+  .products { gap: 2.75rem; }
+  .product { text-align: left; }
+  .product__media { aspect-ratio: 16 / 10; }
+  .product__info { padding: 1rem 0 1.125rem; min-width: 0; }
+  .product__name { font-size: 1.5rem; margin-top: .375rem; }
+  .product__kind { margin-top: .5rem; }
+  .product__desc { max-width: none; margin: .625rem 0 0; font-size: .9375rem; line-height: 1.55; }
+  .product__keys { max-width: none; margin: .875rem 0 0; padding-top: .75rem; }
+  .product__keys ul { justify-content: flex-start; font-size: .875rem; }
   .product__keys li { white-space: normal; }
-  .product .btn { grid-column: 1 / -1; margin-top: 0; }
-  .product--cta { display: flex; border-bottom: 0; }
-  .product--cta .product__media { min-height: 0; gap: 1.5rem; margin-bottom: 1rem; }
+  .product--cta .product__media { aspect-ratio: auto; min-height: 0; gap: 1.5rem; margin-bottom: 1rem; }
 }
-
-@media (max-width: 22.5rem) { .product { grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1rem .875rem; } .product__kind { letter-spacing: .08em; } }
+@media (max-width: 22.5rem) { .product__kind { letter-spacing: .08em; } }
 
 /* Supply formats */
 .supply { display: grid; gap: var(--sp-4); padding: var(--sp-5) var(--sp-3); background: var(--ink); color: #fff; }
