@@ -387,6 +387,11 @@ p, li, .lede { text-wrap: pretty; }
   padding: .625rem 1.125rem .625rem .625rem; background: rgba(255, 255, 255, .95); box-shadow: var(--shadow-2);
   font-size: .875rem; font-weight: 600; animation: bob 5s ease-in-out infinite;
 }
+/* Custom production photo is a tall portrait: taller slot, framed on the beaker, tag clear of the oil */
+#custom .split__media img { object-position: center 64%; }
+#custom .floating-tag { top: 1.25rem; bottom: auto; }
+@media (min-width: 64rem) { #custom .split .split__media, #custom.section .split__media { min-height: 38rem; } }
+@media (min-width: 36rem) and (max-width: 63.99rem) { #custom .split .split__media { aspect-ratio: 4 / 3.4; } }
 .floating-tag b { display: grid; place-items: center; min-width: 2.25rem; height: 2.25rem; padding: 0 .625rem; background: var(--olive); color: #fff; font-weight: 700; font-size: .8125rem; }
 @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 
@@ -864,7 +869,7 @@ a.contact-pill:active { transform: scale(.98); }
   <section class="section" id="custom" aria-labelledby="custom-title">
     <div class="wrap split">
       <div class="split__media reveal-img">
-        <img src="images/s-custom.jpg" alt="Perfumer holding a vial of golden essential oil in sunlight" loading="lazy">
+        <img src="images/s-custom.jpg" alt="Hand holding a glass beaker of freshly distilled golden essential oil" loading="lazy">
         <div class="floating-tag"><b>FR·BG</b>Producer network</div>
       </div>
       <div class="split__body reveal d1">
