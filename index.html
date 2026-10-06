@@ -337,6 +337,7 @@ p, li, .lede { text-wrap: pretty; }
 .cat-dialog__num { color: var(--muted); margin-bottom: .75rem; padding-right: 3.5rem; }
 .cat-dialog__title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; padding-right: 3rem; }
 .cat-dialog .lede { max-width: 44rem; }
+.cat-dialog .lede + .lede { margin-top: .75rem; }
 .cat-dialog__stat { display: inline-block; margin-top: 1.25rem; padding: .5rem .875rem; background: var(--olive); color: #fff; font-size: .8125rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .cat-dialog__label { margin: var(--sp-4) 0 1rem; }
 .cat-list { display: grid; gap: 0 2rem; border-top: 1px solid rgba(23, 21, 15, .1); }
@@ -1210,10 +1211,11 @@ a.contact-pill:active { transform: scale(.98); }
     <button class="cat-dialog__close" type="button" data-close aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
     <p class="eyebrow cat-dialog__num">03 · Product catalogue</p>
     <h3 class="title cat-dialog__title" id="cat-hydrolates-title">Floral Waters</h3>
-    <p class="lede">Natural floral and plant waters obtained during the distillation of aromatic and medicinal plants.</p>
+    <p class="lede">Our floral waters undergo a double distillation process. During the second stage, the floral water is redistilled with the essential oil of the same plant. This process is designed to enhance the aroma (for example, the rich floral character of Damask rose) and to reduce the initial microbial load.</p>
+    <p class="lede">Shelf life is determined through stability testing, whilst microbiological quality is assessed by testing for bacteria, yeasts and moulds.</p>
     <p class="cat-dialog__stat">30+ BIO floral waters</p>
     <p class="eyebrow cat-dialog__label">Key items</p>
-        <ul class="cat-list" id="cat-hydrolates-list"><li><b>Rose Damascena</b><i>Rosa damascena</i></li><li><b>Rose Alba</b><i>Rosa alba</i></li><li><b>Lavender</b><i>Lavandula angustifolia</i></li><li><b>Helichrysum / Immortelle</b><i>Helichrysum italicum</i></li><li><b>Melissa</b><i>Melissa officinalis</i></li><li><b>German Chamomile</b><i>Matricaria recutita</i></li><li class="is-extra"><b>Roman Chamomile</b><i>Chamaemelum nobile</i></li><li class="is-extra"><b>Clary Sage</b><i>Salvia sclarea</i></li><li class="is-extra"><b>Peppermint</b><i>Mentha piperita</i></li><li class="is-extra"><b>Rosemary</b><i>Rosmarinus officinalis</i></li><li class="is-extra"><b>Calendula</b><i>Calendula officinalis</i></li><li class="is-extra"><b>Juniper Berry</b><i>Juniperus communis</i></li><li class="is-extra"><b>Rosehip</b><i>Rosa canina</i></li><li class="is-extra"><b>Geranium Rosat</b><i>Pelargonium graveolens</i></li></ul>
+        <ul class="cat-list" id="cat-hydrolates-list"><li><b>Rose Damascena</b><i>Rosa damascena</i></li><li><b>Rose Alba</b><i>Rosa alba</i></li><li><b>Lavender</b><i>Lavandula angustifolia</i></li><li><b>Helichrysum / Immortelle</b><i>Helichrysum italicum</i></li><li><b>Melissa</b><i>Melissa officinalis</i></li><li><b>German Chamomile</b><i>Matricaria recutita</i></li><li><b>Clary Sage</b><i>Salvia sclarea</i></li><li><b>Peppermint</b><i>Mentha piperita</i></li><li class="is-extra"><b>Roman Chamomile</b><i>Chamaemelum nobile</i></li><li class="is-extra"><b>Rosemary</b><i>Rosmarinus officinalis</i></li><li class="is-extra"><b>Calendula</b><i>Calendula officinalis</i></li><li class="is-extra"><b>Juniper Berry</b><i>Juniperus communis</i></li><li class="is-extra"><b>Rosehip</b><i>Rosa canina</i></li><li class="is-extra"><b>Geranium Rosat</b><i>Pelargonium graveolens</i></li></ul>
     <button class="btn btn--line cat-toggle" type="button" aria-expanded="false" aria-controls="cat-hydrolates-list" data-more="Show all 14 items" data-less="Show key items only">Show all 14 items</button>
     <div class="cat-dialog__notes"><p>Also available: basil, yarrow, nettle, fennel, oregano, thyme, St John’s wort, wormwood and other floral waters.</p></div>
     <div class="cat-dialog__actions"><a class="btn" href="#quote" data-interest="Floral waters">Request price &amp; availability</a><a class="btn btn--line" href="#quote" data-interest="Floral waters">Request the full range</a></div>
