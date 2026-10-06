@@ -1,6 +1,6 @@
 # Botanical Extracts Pro
 
-B2B website for Botanical Extracts Pro, a producer and supplier of natural raw materials for perfumery, cosmetics and aromatherapy: essential oils, absolutes, CO₂ extracts, concretes, hydrolates and plant waxes, with custom production and sourcing.
+B2B website for Botanical Extracts Pro, a producer and supplier of natural raw materials for perfumery, cosmetics and aromatherapy: essential oils, absolutes, CO₂ extracts, concretes, floral waters and plant waxes, with custom production and sourcing.
 
 The site is a single static page: `index.html` plus the photos in `images/`. No build step is needed.
 
