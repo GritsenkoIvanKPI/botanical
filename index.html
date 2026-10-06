@@ -362,7 +362,7 @@ p, li, .lede { text-wrap: pretty; }
 .split { display: grid; gap: var(--sp-4); align-items: center; }
 @media (min-width: 64rem) { .split { grid-template-columns: 1fr 1fr; gap: 2rem; } .split--rev .split__media { order: 2; } }
 /* Tablets and landscape phones: wider, shorter photos when stacked */
-@media (min-width: 36rem) and (max-width: 63.99rem) { .split .split__media, .features-grid .split__media { aspect-ratio: 16 / 10; } #approach .split__media img { object-position: center 35%; } }
+@media (min-width: 36rem) and (max-width: 63.99rem) { .split .split__media, .features-grid .split__media { aspect-ratio: 16 / 10; } #approach .split__media img { object-position: center 22%; } }
 /* Desktop: photo matches the height of the text column beside it */
 @media (min-width: 64rem) {
   .split, .features-grid { align-items: stretch; }
@@ -370,7 +370,7 @@ p, li, .lede { text-wrap: pretty; }
   .split .split__media img, .features-grid .split__media img { position: absolute; inset: 0; }
   .split__body { align-self: center; }
   .split:not(.split--rev) .split__body { padding-left: 2.5rem; }
-  #approach .split__media img { object-position: center 35%; }
+  #approach .split__media img { object-position: center 22%; }
 }
 .split__media { position: relative; overflow: hidden; aspect-ratio: 4 / 5; }
 .split__media img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.12); transition: transform 1.8s var(--ease); }
@@ -685,7 +685,7 @@ a.contact-pill:active { transform: scale(.98); }
       </div>
       <ul class="products">
         <li class="product reveal">
-          <div class="product__media" data-dialog="cat-essential-oils"><span class="badge badge--olive">60+ BIO</span><img src="images/p-essential-oils.jpg" alt="Stainless steel steam distillation stills in an essential oil distillery" loading="lazy"></div>
+          <div class="product__media" data-dialog="cat-essential-oils"><span class="badge badge--olive">60+ BIO</span><img src="images/p-essential-oils.jpg" alt="Drop of golden essential oil" loading="lazy"></div>
           <div class="product__info">
             <span class="product__num">01</span>
             <h3 class="product__name">Natural Essential Oils</h3>
@@ -696,7 +696,7 @@ a.contact-pill:active { transform: scale(.98); }
           <button class="btn btn--block" type="button" data-dialog="cat-essential-oils">View full range</button>
         </li>
         <li class="product reveal d1">
-          <div class="product__media" data-dialog="cat-carrier-oils"><img src="images/p-base-oils.jpg" alt="Cold-press oil expellers with golden plant oil flowing into a tank" loading="lazy"></div>
+          <div class="product__media" data-dialog="cat-carrier-oils"><img src="images/p-base-oils.jpg" alt="Golden cold-pressed plant oil with almonds and apricot kernels" loading="lazy"></div>
           <div class="product__info">
             <span class="product__num">02</span>
             <h3 class="product__name">Cold-Pressed Base &amp; Carrier Oils</h3>
@@ -707,7 +707,7 @@ a.contact-pill:active { transform: scale(.98); }
           <button class="btn btn--block" type="button" data-dialog="cat-carrier-oils">View full range</button>
         </li>
         <li class="product reveal d2">
-          <div class="product__media" data-dialog="cat-hydrolates"><span class="badge badge--olive">30+ BIO</span><img src="images/p-hydrolates.jpg" alt="Florentine separators and IBC containers of hydrolate" loading="lazy"></div>
+          <div class="product__media" data-dialog="cat-hydrolates"><span class="badge badge--olive">30+ BIO</span><img src="images/p-hydrolates.jpg" alt="Clary sage leaf with water droplets" loading="lazy"></div>
           <div class="product__info">
             <span class="product__num">03</span>
             <h3 class="product__name">Floral Waters &amp; Hydrolates</h3>
@@ -718,7 +718,7 @@ a.contact-pill:active { transform: scale(.98); }
           <button class="btn btn--block" type="button" data-dialog="cat-hydrolates">View full range</button>
         </li>
         <li class="product reveal d3">
-          <div class="product__media" data-dialog="cat-concretes-absolutes"><img src="images/p-concretes.jpg" alt="Workers loading fresh jasmine flowers into an industrial extractor" loading="lazy"></div>
+          <div class="product__media" data-dialog="cat-concretes-absolutes"><img src="images/p-concretes.jpg" alt="Floral concrete with jasmine flowers" loading="lazy"></div>
           <div class="product__info">
             <span class="product__num">04</span>
             <h3 class="product__name">Concretes &amp; Absolutes</h3>
@@ -729,7 +729,7 @@ a.contact-pill:active { transform: scale(.98); }
           <button class="btn btn--block" type="button" data-dialog="cat-concretes-absolutes">View full range</button>
         </li>
         <li class="product reveal">
-          <div class="product__media" data-dialog="cat-macerates"><img src="images/p-macerates.jpg" alt="Stainless steel maceration tanks with calendula flowers in plant oil" loading="lazy"></div>
+          <div class="product__media" data-dialog="cat-macerates"><img src="images/p-macerates.jpg" alt="Calendula flowers macerating in a jar of plant oil" loading="lazy"></div>
           <div class="product__info">
             <span class="product__num">05</span>
             <h3 class="product__name">Oil Extracts / Macerates</h3>
@@ -740,7 +740,7 @@ a.contact-pill:active { transform: scale(.98); }
           <button class="btn btn--block" type="button" data-dialog="cat-macerates">View full range</button>
         </li>
         <li class="product reveal d1">
-          <div class="product__media" data-dialog="cat-pg-extracts"><img src="images/p-pg-extracts.jpg" alt="Plant extract production line filling canisters" loading="lazy"></div>
+          <div class="product__media" data-dialog="cat-pg-extracts"><img src="images/p-pg-extracts.jpg" alt="Beaker of liquid plant extract with chamomile flowers" loading="lazy"></div>
           <div class="product__info">
             <span class="product__num">06</span>
             <h3 class="product__name">Propylene Glycol Extracts</h3>
@@ -751,7 +751,7 @@ a.contact-pill:active { transform: scale(.98); }
           <button class="btn btn--block" type="button" data-dialog="cat-pg-extracts">View full range</button>
         </li>
         <li class="product reveal d2">
-          <div class="product__media" data-dialog="cat-co2-extracts"><span class="badge badge--saffron">≈ 100 items</span><img src="images/p-co2.jpg" alt="High-pressure supercritical CO2 extraction vessels" loading="lazy"></div>
+          <div class="product__media" data-dialog="cat-co2-extracts"><span class="badge badge--saffron">≈ 100 items</span><img src="images/p-co2.jpg" alt="Pink peppercorns and coriander seeds" loading="lazy"></div>
           <div class="product__info">
             <span class="product__num">07</span>
             <h3 class="product__name">CO<span class="sub">2</span> Extracts</h3>
@@ -773,7 +773,7 @@ a.contact-pill:active { transform: scale(.98); }
           <button class="btn btn--block" type="button" data-dialog="cat-butters">View full range</button>
         </li>
         <li class="product reveal">
-          <div class="product__media" data-dialog="cat-herbs"><img src="images/p-herbs.jpg" alt="Herb drying belts and sacks of herbal powder in a processing facility" loading="lazy"></div>
+          <div class="product__media" data-dialog="cat-herbs"><img src="images/p-herbs.jpg" alt="Dried herbs and herbal powders" loading="lazy"></div>
           <div class="product__info">
             <span class="product__num">09</span>
             <h3 class="product__name">Herbs &amp; Herbal Powders</h3>
@@ -784,7 +784,7 @@ a.contact-pill:active { transform: scale(.98); }
           <button class="btn btn--block" type="button" data-dialog="cat-herbs">View full range</button>
         </li>
         <li class="product reveal d1">
-          <div class="product__media" data-dialog="cat-waxes"><img src="images/p-waxes.jpg" alt="Cooling trays of natural wax with sacks on pallets" loading="lazy"></div>
+          <div class="product__media" data-dialog="cat-waxes"><img src="images/p-waxes.jpg" alt="Flakes of natural wax" loading="lazy"></div>
           <div class="product__info">
             <span class="product__num">10</span>
             <h3 class="product__name">Natural Waxes</h3>
@@ -795,7 +795,7 @@ a.contact-pill:active { transform: scale(.98); }
           <button class="btn btn--block" type="button" data-dialog="cat-waxes">View full range</button>
         </li>
         <li class="product reveal d2">
-          <div class="product__media"><span class="badge badge--terra">Made to order</span><img src="images/p-custom.jpg" alt="Large-scale Damask rose harvest with sacks loaded onto a truck" loading="lazy"></div>
+          <div class="product__media"><span class="badge badge--terra">Made to order</span><img src="images/p-custom.jpg" alt="Dried immortelle flowers" loading="lazy"></div>
           <div class="product__info">
             <span class="product__num">Bespoke</span>
             <h3 class="product__name">Custom Production</h3>
@@ -863,7 +863,7 @@ a.contact-pill:active { transform: scale(.98); }
   <section class="section" id="custom" aria-labelledby="custom-title">
     <div class="wrap split">
       <div class="split__media reveal-img">
-        <img src="images/s-lab.jpg" alt="Technician loading samples into a GC-MS in the quality control laboratory" loading="lazy">
+        <img src="images/s-custom.jpg" alt="Perfumer holding a vial of golden essential oil in sunlight" loading="lazy">
         <div class="floating-tag"><b>FR·BG</b>Producer network</div>
       </div>
       <div class="split__body reveal d1">
@@ -928,7 +928,7 @@ a.contact-pill:active { transform: scale(.98); }
         </ul>
       </div>
       <div class="split__media reveal-img">
-        <img src="images/s-harvest.jpg" alt="Mechanised harvest of lavender and clary sage" loading="lazy">
+        <img src="images/s-harvest.jpg" alt="Harvesting immortelle flowers into a basket" loading="lazy">
         <div class="floating-tag"><b>12</b>Years at the source</div>
       </div>
     </div>
@@ -1006,7 +1006,7 @@ a.contact-pill:active { transform: scale(.98); }
   <section class="section" id="approach" aria-labelledby="approach-title">
     <div class="wrap split split--rev">
       <div class="split__media reveal-img">
-        <img src="images/s-plantation.jpg" alt="Aerial view of rose and lavender plantations with the production site" loading="lazy">
+        <img src="images/s-field.jpg" alt="Clary sage and lavender fields in Provence" loading="lazy">
       </div>
       <div class="split__body reveal d1">
         <p class="eyebrow">Our approach</p>
@@ -1072,7 +1072,7 @@ a.contact-pill:active { transform: scale(.98); }
     <div class="wrap">
       <div class="quote reveal">
         <aside class="quote__aside">
-          <img src="images/s-warehouse.jpg" alt="Export warehouse with drums and IBC containers ready for shipping" loading="lazy">
+          <img src="images/s-samples.jpg" alt="Amber sample vials with rose petals and lavender" loading="lazy">
           <h2 class="title" id="quote-title">Request a <em>quote.</em></h2>
           <p>Tell us what you need. We reply directly with availability, documentation and a sample proposal.</p>
           <div class="contact-list">
