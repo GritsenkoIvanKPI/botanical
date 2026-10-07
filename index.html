@@ -259,6 +259,7 @@ p, li, .lede { text-wrap: pretty; }
 .product .btn { margin-top: auto; }
 
 .product--cta .product__media { display: flex; flex-direction: column; justify-content: space-between; flex: 1 0 auto; aspect-ratio: auto; min-height: 18rem; padding: var(--sp-4) var(--sp-3); margin-bottom: 1.25rem; text-align: left; background: var(--saffron); box-shadow: none; }
+@media (min-width: 36rem) { .product--cta { grid-column: span 2; } }
 .product--cta .title { font-size: clamp(1.875rem, 2.6vw, 2.375rem); margin-bottom: .75rem; }
 .product--cta p { font-size: .9375rem; }
 .product--cta .flower { width: 3rem; height: 3rem; animation: spin 18s linear infinite; }
@@ -747,20 +748,9 @@ a.contact-pill:active { transform: scale(.98); }
           <button class="btn btn--block" type="button" data-dialog="cat-macerates">View full range</button>
         </li>
         <li class="product reveal d1">
-          <div class="product__media" data-dialog="cat-pg-extracts"><img src="images/p-pg-extracts.jpg" alt="Beaker of liquid plant extract with chamomile flowers" loading="lazy"></div>
-          <div class="product__info">
-            <span class="product__num">06</span>
-            <h3 class="product__name">Propylene Glycol Extracts</h3>
-            <p class="eyebrow product__kind">Matched to your requirements</p>
-            <p class="product__desc">Plant extracts on a propylene glycol base for cosmetic formulations.</p>
-            <div class="product__keys"><span class="product__keys-label">Includes</span><ul><li>Medicinal plants</li><li>Herbs</li><li>Flowers</li></ul></div>
-          </div>
-          <button class="btn btn--block" type="button" data-dialog="cat-pg-extracts">View full range</button>
-        </li>
-        <li class="product reveal d2">
           <div class="product__media" data-dialog="cat-co2-extracts"><span class="badge badge--saffron">Exclusive</span><img src="images/p-co2.jpg" alt="Pink peppercorns and coriander seeds" loading="lazy"></div>
           <div class="product__info">
-            <span class="product__num">07</span>
+            <span class="product__num">06</span>
             <h3 class="product__name">CO<span class="sub">2</span> Extracts</h3>
             <p class="eyebrow product__kind">Supercritical CO<span class="sub">2</span> extraction</p>
             <p class="product__desc">Our exclusive products: concentrated extracts from supercritical CO₂ extraction.</p>
@@ -768,10 +758,10 @@ a.contact-pill:active { transform: scale(.98); }
           </div>
           <button class="btn btn--block" type="button" data-dialog="cat-co2-extracts">View full range</button>
         </li>
-        <li class="product reveal d3">
+        <li class="product reveal d2">
           <div class="product__media" data-dialog="cat-butters"><img src="images/p-butters.jpg" alt="Blocks of natural plant butter on pallets in a warehouse" loading="lazy"></div>
           <div class="product__info">
-            <span class="product__num">08</span>
+            <span class="product__num">07</span>
             <h3 class="product__name">Butters / Plant-Based Butters</h3>
             <p class="eyebrow product__kind">Range on request</p>
             <p class="product__desc">Natural plant butters for cosmetic and care formulations.</p>
@@ -779,10 +769,10 @@ a.contact-pill:active { transform: scale(.98); }
           </div>
           <button class="btn btn--block" type="button" data-dialog="cat-butters">View full range</button>
         </li>
-        <li class="product reveal">
+        <li class="product reveal d3">
           <div class="product__media" data-dialog="cat-herbs"><img src="images/p-herbs.jpg" alt="Dried herbs and herbal powders" loading="lazy"></div>
           <div class="product__info">
-            <span class="product__num">09</span>
+            <span class="product__num">08</span>
             <h3 class="product__name">Herbs &amp; Herbal Powders</h3>
             <p class="eyebrow product__kind">Whole, cut or milled</p>
             <p class="product__desc">Dried aromatic and medicinal plants for distillation and extraction.</p>
@@ -790,10 +780,10 @@ a.contact-pill:active { transform: scale(.98); }
           </div>
           <button class="btn btn--block" type="button" data-dialog="cat-herbs">View full range</button>
         </li>
-        <li class="product reveal d1">
+        <li class="product reveal">
           <div class="product__media" data-dialog="cat-waxes"><img src="images/p-waxes.jpg" alt="Flakes of natural wax" loading="lazy"></div>
           <div class="product__info">
-            <span class="product__num">10</span>
+            <span class="product__num">09</span>
             <h3 class="product__name">Natural Waxes</h3>
             <p class="eyebrow product__kind">Beeswax / Cera Alba &amp; more</p>
             <p class="product__desc">Natural waxes for cosmetics, care products and formulations.</p>
@@ -801,7 +791,7 @@ a.contact-pill:active { transform: scale(.98); }
           </div>
           <button class="btn btn--block" type="button" data-dialog="cat-waxes">View full range</button>
         </li>
-        <li class="product reveal d2">
+        <li class="product reveal d1">
           <div class="product__media"><span class="badge badge--terra">Made to order</span><img src="images/p-custom.jpg" alt="Worker loading rose petals into a stainless steel still" loading="lazy"></div>
           <div class="product__info">
             <span class="product__num">Bespoke</span>
@@ -811,7 +801,7 @@ a.contact-pill:active { transform: scale(.98); }
           </div>
           <a class="btn btn--block btn--ink" href="#custom">How it works</a>
         </li>
-        <li class="product product--cta reveal d3">
+        <li class="product product--cta reveal d2">
           <div class="product__media">
             <svg class="flower"><use href="#i-flower"/></svg>
             <div>
@@ -947,7 +937,7 @@ a.contact-pill:active { transform: scale(.98); }
       <ul class="stats">
         <li class="stat reveal"><span class="stat__num" data-count="12">12</span><span class="stat__label">Years of experience</span><span class="stat__note">In natural aromatic ingredients</span></li>
         <li class="stat reveal d1"><span class="stat__num" data-count="2">2</span><span class="stat__label">Countries of production</span><span class="stat__note">France &amp; Bulgaria</span></li>
-        <li class="stat reveal d2"><span class="stat__num" data-count="10">10</span><span class="stat__label">Product categories</span><span class="stat__note">From essential oils to waxes</span></li>
+        <li class="stat reveal d2"><span class="stat__num" data-count="9">9</span><span class="stat__label">Product categories</span><span class="stat__note">From essential oils to waxes</span></li>
         <li class="stat reveal d3"><span class="stat__num"><span data-count="100">100</span><em>%</em></span><span class="stat__label">Batch traceability</span><span class="stat__note">Documented from field to delivery</span></li>
       </ul>
     </div>
@@ -1139,7 +1129,6 @@ a.contact-pill:active { transform: scale(.98); }
             <li><a href="#products" data-dialog="cat-hydrolates">Hydrolats</a></li>
             <li><a href="#products" data-dialog="cat-concretes-absolutes">Concretes &amp; Absolutes</a></li>
             <li><a href="#products" data-dialog="cat-macerates">Macerates</a></li>
-            <li><a href="#products" data-dialog="cat-pg-extracts">PG Extracts</a></li>
             <li><a href="#products" data-dialog="cat-co2-extracts">CO₂ Extracts</a></li>
             <li><a href="#products" data-dialog="cat-butters">Butters</a></li>
             <li><a href="#products" data-dialog="cat-herbs">Herbs &amp; Powders</a></li>
@@ -1245,22 +1234,10 @@ a.contact-pill:active { transform: scale(.98); }
     <div class="cat-dialog__actions"><a class="btn" href="#quote" data-interest="Oil extracts / macerates">Request the range</a><a class="btn btn--line" href="#quote" data-interest="Oil extracts / macerates">Request production</a></div>
   </div>
 </dialog>
-<dialog class="cat-dialog" id="cat-pg-extracts" aria-labelledby="cat-pg-extracts-title">
-  <div class="cat-dialog__inner">
-    <button class="cat-dialog__close" type="button" data-close aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
-    <p class="eyebrow cat-dialog__num">06 · Product catalogue</p>
-    <h3 class="title cat-dialog__title" id="cat-pg-extracts-title">Propylene Glycol Extracts</h3>
-    <p class="lede">Plant extracts on a propylene glycol base for the cosmetic industry and professional formulations, with a wide choice of medicinal plants, herbs, flowers and other botanicals.</p>
-    
-    
-    <div class="cat-dialog__notes"><p>We can select and produce an extract to match your requirements.</p></div>
-    <div class="cat-dialog__actions"><a class="btn" href="#quote" data-interest="Propylene glycol extracts">Request the range</a><a class="btn btn--line" href="#quote" data-interest="Propylene glycol extracts">Request a product</a></div>
-  </div>
-</dialog>
 <dialog class="cat-dialog" id="cat-co2-extracts" aria-labelledby="cat-co2-extracts-title">
   <div class="cat-dialog__inner">
     <button class="cat-dialog__close" type="button" data-close aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
-    <p class="eyebrow cat-dialog__num">07 · Product catalogue</p>
+    <p class="eyebrow cat-dialog__num">06 · Product catalogue</p>
     <h3 class="title cat-dialog__title" id="cat-co2-extracts-title">Exclusive CO<span class="sub">2</span> Extracts</h3>
     <p class="lede">CO₂ extracts are our exclusive products: highly concentrated natural extracts obtained by supercritical CO₂ extraction at low temperatures, for perfumery, cosmetics and professional production.</p>
     <p class="cat-dialog__stat">Our exclusive products</p>
@@ -1274,7 +1251,7 @@ a.contact-pill:active { transform: scale(.98); }
 <dialog class="cat-dialog" id="cat-butters" aria-labelledby="cat-butters-title">
   <div class="cat-dialog__inner">
     <button class="cat-dialog__close" type="button" data-close aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
-    <p class="eyebrow cat-dialog__num">08 · Product catalogue</p>
+    <p class="eyebrow cat-dialog__num">07 · Product catalogue</p>
     <h3 class="title cat-dialog__title" id="cat-butters-title">Butters / Plant-Based Butters</h3>
     <p class="lede">Natural plant butters for cosmetic production, skin and hair care and professional formulations.</p>
     
@@ -1286,7 +1263,7 @@ a.contact-pill:active { transform: scale(.98); }
 <dialog class="cat-dialog" id="cat-herbs" aria-labelledby="cat-herbs-title">
   <div class="cat-dialog__inner">
     <button class="cat-dialog__close" type="button" data-close aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
-    <p class="eyebrow cat-dialog__num">09 · Product catalogue</p>
+    <p class="eyebrow cat-dialog__num">08 · Product catalogue</p>
     <h3 class="title cat-dialog__title" id="cat-herbs-title">Herbs &amp; Herbal Powders</h3>
     <p class="lede">Natural dried plant material, whole, cut or milled. The range includes aromatic and medicinal plants grown by us and our partners.</p>
     
@@ -1298,7 +1275,7 @@ a.contact-pill:active { transform: scale(.98); }
 <dialog class="cat-dialog" id="cat-waxes" aria-labelledby="cat-waxes-title">
   <div class="cat-dialog__inner">
     <button class="cat-dialog__close" type="button" data-close aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button>
-    <p class="eyebrow cat-dialog__num">10 · Product catalogue</p>
+    <p class="eyebrow cat-dialog__num">09 · Product catalogue</p>
     <h3 class="title cat-dialog__title" id="cat-waxes-title">Natural Waxes</h3>
     <p class="lede">Natural waxes for the cosmetic industry, care products and professional formulations.</p>
     
