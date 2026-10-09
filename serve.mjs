@@ -21,6 +21,9 @@ const MIME = {
   '.woff': 'font/woff',
   '.woff2': 'font/woff2',
   '.ico': 'image/x-icon',
+  '.txt': 'text/plain',
+  '.xml': 'application/xml',
+  '.webmanifest': 'application/manifest+json',
 };
 
 http.createServer((req, res) => {

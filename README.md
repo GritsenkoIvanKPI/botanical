@@ -20,3 +20,11 @@ node serve.mjs       # serves the site at http://localhost:3011
 
 - The quote form opens the visitor's email app with a prefilled request to the company address. It has no server backend yet.
 - Partner names are shown as text until the real logo files are available.
+
+## SEO
+
+- Meta tags, Open Graph / Twitter tags and JSON-LD structured data (Organization, WebSite, FAQPage) are in the `<head>` of `index.html`.
+- `og-image.jpg` is the 1200×630 share image. Icons: `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `site.webmanifest`.
+- `robots.txt` and `sitemap.xml` sit in the site root.
+- **Changing the domain:** canonical, Open Graph and structured-data URLs use `https://botanical-liart.vercel.app`. When the site moves to its own domain, replace that address in `index.html`, `robots.txt` and `sitemap.xml`.
+- If the FAQ text changes, update the matching `FAQPage` block in the `<head>` so Google sees the same answers.

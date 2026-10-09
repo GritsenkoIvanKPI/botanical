@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://botanical-liart.vercel.app/sitemap.xml
