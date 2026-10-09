@@ -561,6 +561,21 @@ a.contact-pill:active { transform: scale(.98); }
 .consent { grid-column: 1 / -1; display: flex; gap: .625rem; align-items: flex-start; font-size: .8125rem; line-height: 1.5; color: var(--muted); cursor: pointer; }
 .consent input { accent-color: var(--olive); margin-top: .1875rem; width: 1rem; height: 1rem; flex: none; cursor: pointer; }
 .form__foot { grid-column: 1 / -1; display: grid; gap: .75rem; }
+.form[hidden] { display: none; }
+.form__trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form .btn[disabled] { opacity: .6; cursor: progress; transform: none; box-shadow: none; }
+.form__status.is-error { color: var(--terra); }
+.form__status a { text-decoration: underline; text-underline-offset: 3px; }
+.form-done { display: grid; gap: 1rem; align-content: center; justify-items: start; padding: var(--sp-4) var(--sp-3); }
+.form-done[hidden] { display: none; }
+@media (min-width: 48rem) { .form-done { padding: var(--sp-5); } }
+.form-done:focus { outline: none; }
+.form-done__icon { display: grid; place-items: center; width: 3.5rem; height: 3.5rem; background: var(--olive); color: #fff; }
+.form-done__icon svg { width: 1.5rem; height: 1.5rem; }
+.form-done__title { font: 400 clamp(2rem, 3.4vw, 2.75rem)/1.1 var(--font-serif); letter-spacing: -.03em; }
+.form-done__title em { font-style: italic; }
+.form-done p { color: var(--muted); max-width: 30rem; }
+@media (max-width: 35.99rem) { .form-done { justify-items: stretch; } }
 .form__status { font-size: .875rem; font-weight: 600; min-height: 1.5rem; }
 
 /* ---------- Footer ---------- */
@@ -1115,6 +1130,7 @@ a.contact-pill:active { transform: scale(.98); }
         <form class="form" id="request-form" novalidate>
           <p class="eyebrow">B2B request · takes 1 minute</p>
           <input type="hidden" name="interest" value="">
+          <div class="form__trap" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
           <div class="field">
             <label for="f-name">Name *</label>
             <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
@@ -1137,6 +1153,12 @@ a.contact-pill:active { transform: scale(.98); }
             <p class="form__status" role="status" aria-live="polite"></p>
           </div>
         </form>
+        <div class="form-done" id="request-done" hidden tabindex="-1">
+          <span class="form-done__icon" aria-hidden="true"><svg viewBox="0 0 16 16"><use href="#i-check"/></svg></span>
+          <h3 class="form-done__title">Request <em>sent.</em></h3>
+          <p>Thank you. We have received your request and will reply directly to your email with availability and documentation.</p>
+          <a class="btn btn--line" href="https://wa.me/33658651354" target="_blank" rel="noopener">Message us on WhatsApp <svg><use href="#i-arrow"/></svg></a>
+        </div>
       </div>
     </div>
   </section>
@@ -1488,28 +1510,91 @@ a.contact-pill:active { transform: scale(.98); }
   const interestField = $('#request-form input[name="interest"]');
   $$('[data-interest]').forEach((btn) => btn.addEventListener('click', () => { interestField.value = btn.dataset.interest; }));
 
-  // Form → opens the visitor's mail client with a prefilled request
+  // Request form → send-form.php → Telegram.
+  // If the server endpoint is not available (for example on a static preview host),
+  // fall back to opening the visitor's email app with the request prefilled.
   const form = $('#request-form');
+  const done = $('#request-done');
   const status = $('.form__status', form);
-  form.addEventListener('submit', (ev) => {
+  const submitBtn = $('button[type="submit"]', form);
+  const CONTACT_EMAIL = 'emilia.a@botanicalextracts.pro';
+
+  const setStatus = (text, isError) => {
+    status.textContent = text;
+    status.classList.toggle('is-error', !!isError);
+  };
+  const mailFallback = (d) => {
+    const interest = d.interest || 'General enquiry';
+    const body = [
+      `Name: ${d.name}`,
+      `Company: ${d.company}`,
+      `Email: ${d.email}`,
+      `Phone / WhatsApp: ${d.phone || '-'}`,
+      `Interested in: ${interest}`
+    ].join('\n');
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`B2B request: ${interest} (${d.company})`)}&body=${encodeURIComponent(body)}`;
+    setStatus('Your email app will open with the request ready to send.');
+  };
+
+  form.addEventListener('submit', async (ev) => {
     ev.preventDefault();
     if (!form.checkValidity()) {
       form.reportValidity();
-      status.textContent = 'Please fill in the required fields.';
+      setStatus('Please fill in the required fields.', true);
       return;
     }
-    const d = new FormData(form);
-    const interest = d.get('interest') || 'General enquiry';
-    const body = [
-      `Name: ${d.get('name')}`,
-      `Company: ${d.get('company')}`,
-      `Email: ${d.get('email')}`,
-      `Phone / WhatsApp: ${d.get('phone') || '-'}`,
-      `Interested in: ${interest}`
-    ].join('\n');
-    const subject = `B2B request: ${interest} (${d.get('company')})`;
-    window.location.href = `mailto:emilia.a@botanicalextracts.pro?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    status.textContent = 'Thank you! Your email app will open with the request ready to send.';
+    const fd = new FormData(form);
+    const data = {
+      name: fd.get('name').trim(),
+      company: fd.get('company').trim(),
+      email: fd.get('email').trim(),
+      phone: (fd.get('phone') || '').trim(),
+      interest: fd.get('interest') || '',
+      consent: fd.get('consent') ? 1 : 0,
+      website: fd.get('website') || '',
+      page: location.pathname + location.hash
+    };
+
+    submitBtn.disabled = true;
+    setStatus('Sending…');
+    let res, json = null;
+    try {
+      res = await fetch('send-form.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      json = await res.json().catch(() => null);
+    } catch (e) {
+      res = null;
+    }
+    submitBtn.disabled = false;
+
+    if (res && res.ok && json && json.ok) {
+      setStatus('');
+      form.hidden = true;
+      done.hidden = false;
+      done.focus();
+      form.reset();
+      return;
+    }
+    if (json && json.error === 'validation_failed') {
+      const first = Object.keys(json.fields || {})[0];
+      const input = first && form.elements[first];
+      if (input && input.focus) input.focus();
+      setStatus('Please check the highlighted field and try again.', true);
+      return;
+    }
+    if (json && json.error === 'too_many_requests') {
+      setStatus('You have already sent several requests. Please try again in an hour, or write to us on WhatsApp.', true);
+      return;
+    }
+    if (json && json.error === 'delivery_failed') {
+      setStatus('We could not send your request. Please try again, or write to us on WhatsApp.', true);
+      return;
+    }
+    // No working endpoint (static host, missing config, offline): use email instead
+    mailFallback(data);
   });
 })();
 </script>

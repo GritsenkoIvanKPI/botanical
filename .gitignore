@@ -25,3 +25,10 @@ images/b-perfumer.jpg
 
 # Source photo supplied by the client (the web copy lives in images/)
 hands.jpg
+
+# Telegram form: the real config with the bot token never goes into git
+config.php
+
+# Ready-to-upload package for the client (built by build-client-package.py)
+client-package/
+*.zip

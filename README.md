@@ -28,3 +28,12 @@ node serve.mjs       # serves the site at http://localhost:3011
 - `robots.txt` and `sitemap.xml` sit in the site root.
 - **Changing the domain:** canonical, Open Graph and structured-data URLs use `https://botanical-liart.vercel.app`. When the site moves to its own domain, replace that address in `index.html`, `robots.txt` and `sitemap.xml`.
 - If the FAQ text changes, update the matching `FAQPage` block in the `<head>` so Google sees the same answers.
+
+## Request form → Telegram
+
+- The form posts to `send-form.php`, which forwards the request to a Telegram chat. The bot token lives in `config.php` on the server only (never in git; `.htaccess` blocks it from the browser).
+- `config.example.php` is the template for `config.php`. `TELEGRAM_SETUP.md` is the step-by-step guide for the client (in Ukrainian).
+- On a host without PHP (such as the Vercel preview) the form falls back to opening the visitor's email app.
+- `python3 build-client-package.py` builds `client-package/` and `botanical-extracts-pro-site.zip`: the site with all URLs switched to `https://botanicalextracts.pro`, ready to upload to the client's hosting. Both are git-ignored.
+- Local test with PHP: `docker run --rm -v "$PWD":/app -w /app -p 8080:8080 php:8.2-cli php -S 0.0.0.0:8080` (with a temporary `config.php` next to `index.html`).
+

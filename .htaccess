@@ -1,0 +1,40 @@
+# Botanical Extracts Pro — server rules (Apache / LiteSpeed, e.g. Hostinger)
+
+# --- Keep private files private ---
+<FilesMatch "^(config\.php|config\.example\.php|\.htaccess)$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "\.(md|txt\.bak|log)$">
+  Require all denied
+</FilesMatch>
+Options -Indexes
+
+# --- Always use HTTPS ---
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# --- Correct file types ---
+<IfModule mod_mime.c>
+  AddType application/manifest+json .webmanifest
+  AddType image/svg+xml .svg
+</IfModule>
+
+# --- Compression ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml application/xml text/plain application/manifest+json
+</IfModule>
+
+# --- Browser caching: long for images and icons, short for the page itself ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 10 minutes"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/x-icon "access plus 30 days"
+</IfModule>
